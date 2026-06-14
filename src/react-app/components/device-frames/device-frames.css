@@ -1,0 +1,70 @@
+.device-png-frame {
+	position: relative;
+	margin-inline: auto;
+	flex-shrink: 0;
+	isolation: isolate;
+}
+
+.device-png-frame__screen {
+	position: absolute;
+	z-index: 1;
+	overflow: hidden;
+	background: var(--background);
+}
+
+.device-png-frame__overlay {
+	position: absolute;
+	inset: 0;
+	z-index: 2;
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+	pointer-events: none;
+	user-select: none;
+}
+
+.device-png-frame__content {
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	overscroll-behavior: contain;
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: thin;
+	scrollbar-color: color-mix(in oklch, var(--muted-foreground) 35%, transparent) transparent;
+}
+
+.device-png-frame__content::-webkit-scrollbar {
+	width: 4px;
+}
+
+.device-png-frame__content::-webkit-scrollbar-thumb {
+	border-radius: 999px;
+	background: color-mix(in oklch, var(--muted-foreground) 35%, transparent);
+}
+
+.device-png-frame__content::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+@media print {
+	.device-png-frame__overlay {
+		display: none !important;
+	}
+
+	.device-png-frame {
+		width: 100% !important;
+		height: auto !important;
+	}
+
+	.device-png-frame__screen {
+		position: static !important;
+		overflow: visible !important;
+		border-radius: 0 !important;
+	}
+
+	.device-png-frame__content {
+		overflow: visible !important;
+		height: auto !important;
+	}
+}
