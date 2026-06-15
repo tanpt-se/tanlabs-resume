@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Cog, Monitor, Moon, Smartphone, Sun, Tablet, X } from "lucide-react";
+import { Cog, Monitor, Moon, Sun, X } from "lucide-react";
 
 import { LocaleFlag } from "@/components/LocaleFlag";
 import { Button } from "@/components/ui/button";
@@ -12,30 +12,18 @@ import {
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import type { Locale, ViewportSize } from "@/i18n";
+import type { Locale } from "@/i18n";
 import { useLocale } from "@/providers/locale-provider";
 import { useTheme } from "@/providers/theme-provider";
-import { useViewport } from "@/providers/viewport-provider";
 
 const locales: { value: Locale; labelKey: "localeEn" | "localeVi" }[] = [
 	{ value: "en", labelKey: "localeEn" },
 	{ value: "vi", labelKey: "localeVi" },
 ];
 
-const viewports: {
-	value: ViewportSize;
-	labelKey: "viewportMobile" | "viewportTablet" | "viewportWeb";
-	icon: typeof Smartphone;
-}[] = [
-	{ value: "mobile", labelKey: "viewportMobile", icon: Smartphone },
-	{ value: "tablet", labelKey: "viewportTablet", icon: Tablet },
-	{ value: "web", labelKey: "viewportWeb", icon: Monitor },
-];
-
 export function SettingsBubble() {
 	const { locale, setLocale, labels } = useLocale();
 	const { themeMode, setThemeMode } = useTheme();
-	const { viewport, setViewport } = useViewport();
 	const [open, setOpen] = useState(false);
 
 	return (
@@ -69,24 +57,6 @@ export function SettingsBubble() {
 								{labels[item.labelKey]}
 							</DropdownMenuRadioItem>
 						))}
-					</DropdownMenuRadioGroup>
-
-					<DropdownMenuSeparator />
-
-					<DropdownMenuLabel>{labels.viewport}</DropdownMenuLabel>
-					<DropdownMenuRadioGroup
-						value={viewport}
-						onValueChange={(value) => setViewport(value as ViewportSize)}
-					>
-						{viewports.map((item) => {
-							const Icon = item.icon;
-							return (
-								<DropdownMenuRadioItem key={item.value} value={item.value}>
-									<Icon />
-									{labels[item.labelKey]}
-								</DropdownMenuRadioItem>
-							);
-						})}
 					</DropdownMenuRadioGroup>
 
 					<DropdownMenuSeparator />

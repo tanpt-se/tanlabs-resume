@@ -120,16 +120,8 @@
 		font-family: var(--font-headline);
 	}
 
-	body.device-preview-active {
-		overflow: hidden;
-	}
-
 	.resume-preview-content {
 		padding-bottom: 5rem;
-	}
-
-	[data-device-scroll] .resume-preview-content {
-		padding-bottom: 1.25rem;
 	}
 
 	@supports (scrollbar-width: thin) {
@@ -331,16 +323,5 @@
 
 	.print-break-inside-avoid {
 		break-inside: avoid;
-	}
-
-	[data-viewport-frame] {
-		width: 100% !important;
-		max-width: none !important;
-		height: auto !important;
-	}
-
-	.device-png-frame {
-		width: 100% !important;
-		height: auto !important;
 	}
 }

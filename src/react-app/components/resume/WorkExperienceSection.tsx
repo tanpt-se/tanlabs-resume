@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import type { Experience, Profile, ViewportSize } from "@/i18n/types";
+import type { Experience, Profile } from "@/i18n/types";
 
 import { ArticleParagraphs, ProjectSection } from "./newspaper-primitives";
 
@@ -22,25 +22,27 @@ function WorkExperiencePhoto({ profile }: { profile: Profile }) {
 
 function ExperienceCard({
 	job,
-	viewport,
 	className,
 }: {
 	job: Experience;
-	viewport: ViewportSize;
 	className?: string;
 }) {
 	return (
 		<div className={cn("h-full w-full", className)}>
 			<ProjectSection
 				variant="boxed"
-				stackedHeader
 				label={job.company}
-				uppercase={false}
-				viewport={viewport}
-				headerAside={
-					<div className="space-y-0.5 text-left text-sm">
-						<p className="font-medium text-foreground">{job.role}</p>
-						<p className="text-xs text-muted-foreground">{job.period}</p>
+				header={
+					<div className="space-y-0.5">
+						<div className="flex items-baseline justify-between gap-3">
+							<h4 className="newspaper-headline min-w-0 text-base font-extrabold leading-tight @md:text-lg">
+								{job.company}
+							</h4>
+							<p className="shrink-0 text-sm leading-snug text-muted-foreground">
+								{job.period}
+							</p>
+						</div>
+						<p className="font-body text-sm italic text-foreground">{job.role}</p>
 					</div>
 				}
 			>
@@ -53,38 +55,38 @@ function ExperienceCard({
 type WorkExperienceSectionProps = {
 	profile: Profile;
 	experiences: Experience[];
-	viewport: ViewportSize;
 };
 
 export function WorkExperienceSection({
 	profile,
 	experiences,
-	viewport,
 }: WorkExperienceSectionProps) {
-	if (viewport === "mobile") {
-		return experiences.map((job) => (
-			<ExperienceCard key={job.company} job={job} viewport={viewport} />
-		));
-	}
-
 	const [primaryExperience, ...otherExperiences] = experiences;
 
 	return (
 		<>
-			<div className="flex items-stretch gap-5">
-				<div className="flex w-1/2 min-w-0 self-stretch">
-					<WorkExperiencePhoto profile={profile} />
-				</div>
-				<div className="flex w-1/2 min-w-0 self-stretch">
-					{primaryExperience ? (
-						<ExperienceCard job={primaryExperience} viewport={viewport} />
-					) : null}
-				</div>
-			</div>
-			<div className="grid grid-cols-2 items-stretch gap-5">
-				{otherExperiences.map((job) => (
-					<ExperienceCard key={job.company} job={job} viewport={viewport} />
+			<div className="space-y-5 @md:hidden">
+				{experiences.map((job) => (
+					<ExperienceCard key={job.company} job={job} />
 				))}
+			</div>
+
+			<div className="hidden space-y-5 @md:block">
+				<div className="flex items-stretch gap-5">
+					<div className="flex w-1/2 min-w-0 self-stretch">
+						<WorkExperiencePhoto profile={profile} />
+					</div>
+					<div className="flex w-1/2 min-w-0 self-stretch">
+						{primaryExperience ? (
+							<ExperienceCard job={primaryExperience} />
+						) : null}
+					</div>
+				</div>
+				<div className="grid grid-cols-2 items-stretch gap-5">
+					{otherExperiences.map((job) => (
+						<ExperienceCard key={job.company} job={job} />
+					))}
+				</div>
 			</div>
 		</>
 	);

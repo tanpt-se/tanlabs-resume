@@ -2,9 +2,7 @@ import type { Locale, ResumeUiLabels } from "./types";
 
 export const uiLabels: Record<Locale, ResumeUiLabels> = {
 	en: {
-		coreSkills: "Core Skills",
-		openSkillSet: "Skill set",
-		skillSetTitle: "Skills & Experience",
+		skillSetAppendix: "Reference Appendix",
 		skillSetDescription: "Years of hands-on experience with each technology.",
 		yearsUnit: "years",
 		skillColumn: "Skill",
@@ -43,16 +41,10 @@ export const uiLabels: Record<Locale, ResumeUiLabels> = {
 		themeLight: "Light",
 		themeDark: "Dark",
 		themeSystem: "System",
-		viewport: "Preview",
-		viewportMobile: "iPhone 17 Pro",
-		viewportTablet: "iPad Pro",
-		viewportWeb: "Web",
 		newspaperEdition: "Career Edition",
 	},
 	vi: {
-		coreSkills: "Kỹ năng chính",
-		openSkillSet: "Bộ kỹ năng",
-		skillSetTitle: "Kỹ năng & Kinh nghiệm",
+		skillSetAppendix: "Phụ lục đối chiếu",
 		skillSetDescription: "Số năm kinh nghiệm thực tế với từng công nghệ.",
 		yearsUnit: "năm",
 		skillColumn: "Kỹ năng",
@@ -91,10 +83,6 @@ export const uiLabels: Record<Locale, ResumeUiLabels> = {
 		themeLight: "Sáng",
 		themeDark: "Tối",
 		themeSystem: "Hệ thống",
-		viewport: "Xem trước",
-		viewportMobile: "iPhone 17 Pro",
-		viewportTablet: "iPad Pro",
-		viewportWeb: "Web",
 		newspaperEdition: "Chuyên trang Nghề nghiệp",
 	},
 };

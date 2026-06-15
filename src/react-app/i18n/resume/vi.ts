@@ -31,7 +31,7 @@ export const resumeVi: ResumeContent = {
 			],
 		},
 		{
-			company: "FPT Software, Bình Định",
+			company: "FPT Software, Quy Nhơn, Gia Lai",
 			role: "Frontend / React Native Lead",
 			period: "Tháng 9/2022 – Tháng 3/2025",
 			highlights: [
@@ -155,12 +155,15 @@ export const resumeVi: ResumeContent = {
 		},
 	],
 	languages: [
-		"Tiếng Anh (Trung cấp): Giao tiếp hàng ngày trong team Agile, viết email.",
+		"Tiếng Anh (Trung cấp): Giao tiếp hàng ngày trong team Agile",
 	],
 	education: {
-		school: "Học viện Công nghệ Bưu chính Viễn thông (Bộ Quốc phòng), Nha Trang",
+		school: "Học viện Công nghệ Bưu chính Viễn thông, Nha Trang",
+		url: "https://tcu.edu.vn",
 		year: "2019",
 		degree: "Cử nhân Công nghệ Thông tin.",
+		photoCaption:
+			"Lễ công bố hợp tác đào tạo giữa Đại học FPT Quy Nhơn và FPT Software Quy Nhơn.",
 	},
 	certifications: [
 		{

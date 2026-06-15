@@ -3,7 +3,6 @@ import type { ReactNode } from "react";
 import { SkillIcon } from "@/components/SkillIcon";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
-import type { ViewportSize } from "@/i18n/types";
 
 export function NewspaperDivider() {
 	return (
@@ -21,7 +20,7 @@ export function TechTagList({ items }: { items: string[] }) {
 		<div className="flex flex-wrap gap-2">
 			{items.map((item) => (
 				<Badge key={item} variant="outline" className="gap-1.5 rounded-none font-normal">
-					<SkillIcon skill={item} />
+					<SkillIcon skill={item} monochrome />
 					{item}
 				</Badge>
 			))}
@@ -45,16 +44,16 @@ export function ProjectSection({
 	label,
 	children,
 	uppercase = true,
+	header,
 	headerAside,
-	viewport,
 	variant = "plain",
 	stackedHeader = false,
 }: {
 	label: string;
 	children: ReactNode;
 	uppercase?: boolean;
+	header?: ReactNode;
 	headerAside?: ReactNode;
-	viewport?: ViewportSize;
 	variant?: "plain" | "boxed";
 	stackedHeader?: boolean;
 }) {
@@ -64,23 +63,30 @@ export function ProjectSection({
 				<div
 					className={cn(
 						"newspaper-block-head px-4 py-2.5",
-						headerAside && (stackedHeader || viewport === "mobile") && "space-y-2",
-						headerAside &&
+						!header &&
+							headerAside &&
+							stackedHeader &&
+							"space-y-2",
+						!header &&
+							headerAside &&
 							!stackedHeader &&
-							viewport !== "mobile" &&
-							"flex items-start justify-between gap-4",
-						!headerAside && "flex items-center",
+							"space-y-2 @md:flex @md:items-start @md:justify-between @md:gap-4 @md:space-y-0",
+						!header && !headerAside && "flex items-center",
 					)}
 				>
-					<h4
-						className={cn(
-							"newspaper-headline text-sm",
-							uppercase && "uppercase",
-						)}
-					>
-						{label}
-					</h4>
-					{headerAside}
+					{header ?? (
+						<>
+							<h4
+								className={cn(
+									"newspaper-headline text-sm",
+									uppercase && "uppercase",
+								)}
+							>
+								{label}
+							</h4>
+							{headerAside}
+						</>
+					)}
 				</div>
 				<div className="flex-1 px-4 py-3.5">{children}</div>
 			</section>
@@ -91,8 +97,8 @@ export function ProjectSection({
 		<section className="space-y-3">
 			<div
 				className={cn(
-					headerAside && viewport === "mobile" && "space-y-2",
-					headerAside && viewport !== "mobile" && "flex items-start justify-between gap-4",
+					headerAside &&
+						"space-y-2 @md:flex @md:items-start @md:justify-between @md:gap-4 @md:space-y-0",
 				)}
 			>
 				<div className="article-subhead min-w-0">

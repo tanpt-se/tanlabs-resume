@@ -1,5 +1,3 @@
-export type ViewportSize = "mobile" | "tablet" | "web";
-
 export type Locale = "en" | "vi";
 
 export type ThemeMode = "light" | "dark" | "system";
@@ -13,8 +11,10 @@ export type Certification = {
 
 export type Education = {
 	school: string;
+	url: string;
 	year: string;
 	degree: string;
+	photoCaption: string;
 };
 
 export type Experience = {
@@ -82,9 +82,7 @@ export type ResumeContent = {
 export type SkillCategoryLabels = Record<SkillCategoryId, string>;
 
 export type ResumeUiLabels = {
-	coreSkills: string;
-	openSkillSet: string;
-	skillSetTitle: string;
+	skillSetAppendix: string;
 	skillSetDescription: string;
 	yearsUnit: string;
 	skillColumn: string;
@@ -114,9 +112,5 @@ export type ResumeUiLabels = {
 	themeLight: string;
 	themeDark: string;
 	themeSystem: string;
-	viewport: string;
-	viewportMobile: string;
-	viewportTablet: string;
-	viewportWeb: string;
 	newspaperEdition: string;
 };

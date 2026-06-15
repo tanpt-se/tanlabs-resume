@@ -31,7 +31,7 @@ export const resumeEn: ResumeContent = {
 			],
 		},
 		{
-			company: "FPT Software, Binh Dinh",
+			company: "FPT Software, Quy Nhon, Gia Lai",
 			role: "Frontend / React Native Lead",
 			period: "Sep 2022 – Mar 2025",
 			highlights: [
@@ -155,12 +155,15 @@ export const resumeEn: ResumeContent = {
 		},
 	],
 	languages: [
-		"English (Upper-Intermediate): Daily communication in Agile teams, email writing.",
+		"English (Intermediate): Daily communication in Agile teams",
 	],
 	education: {
-		school: "Telecommunications University (Ministry of Defense), Nha Trang",
+		school: "Telecommunications University, Nha Trang",
+		url: "https://tcu.edu.vn",
 		year: "2019",
-		degree: "Bachelor's in IT",
+		degree: "Bachelor's in Information Technology",
+		photoCaption:
+			"Training cooperation announcement between FPT University Quy Nhon and FPT Software Quy Nhon.",
 	},
 	certifications: [
 		{

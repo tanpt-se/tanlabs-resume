@@ -1,7 +1,7 @@
 const BOOT_MIN_MS = 480;
 const BOOT_FADE_MS = 420;
 
-export const BOOT_IMAGE_PATHS = ["/avatar.png", "/work-photo.png"] as const;
+export const BOOT_IMAGE_PATHS = ["/avatar.png", "/work-photo.png", "/education-photo.png"] as const;
 
 function preloadImage(src: string): Promise<void> {
 	return new Promise((resolve) => {

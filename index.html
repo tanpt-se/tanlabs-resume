@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="vi">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -93,14 +93,14 @@
 		</style>
 		<script>
 			(function () {
-				var theme = localStorage.getItem("resume-theme") || "dark";
+				var theme = localStorage.getItem("resume-theme") || "light";
 				var isDark =
 					theme === "dark" ||
 					(theme === "system" &&
 						window.matchMedia("(prefers-color-scheme: dark)").matches);
 				document.documentElement.classList.toggle("dark", isDark);
 
-				var locale = localStorage.getItem("resume-locale") || "vi";
+				var locale = localStorage.getItem("resume-locale") || "en";
 				document.documentElement.lang = locale;
 
 				document.body.classList.add("boot-loading");
