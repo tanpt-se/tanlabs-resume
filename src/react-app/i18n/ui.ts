@@ -23,7 +23,7 @@ export const uiLabels: Record<Locale, ResumeUiLabels> = {
 		professionalSummary: "Professional Summary",
 		workExperience: "Work Experience",
 		highlightProjects: "Highlight Projects",
-		projectCompany: "Company",
+		projectCompany: "Client",
 		projectMarket: "Market",
 		projectPeriod: "Project Period",
 		teamMembers: "Team Members",
@@ -41,7 +41,6 @@ export const uiLabels: Record<Locale, ResumeUiLabels> = {
 		themeLight: "Light",
 		themeDark: "Dark",
 		themeSystem: "System",
-		newspaperEdition: "Career Edition",
 	},
 	vi: {
 		skillSetAppendix: "Phụ lục đối chiếu",
@@ -65,7 +64,7 @@ export const uiLabels: Record<Locale, ResumeUiLabels> = {
 		professionalSummary: "Tóm tắt nghề nghiệp",
 		workExperience: "Kinh nghiệm làm việc",
 		highlightProjects: "Dự án tiêu biểu",
-		projectCompany: "Company",
+		projectCompany: "Khách hàng",
 		projectMarket: "Thị trường",
 		projectPeriod: "Thời gian dự án",
 		teamMembers: "Số lượng thành viên",
@@ -83,6 +82,5 @@ export const uiLabels: Record<Locale, ResumeUiLabels> = {
 		themeLight: "Sáng",
 		themeDark: "Tối",
 		themeSystem: "Hệ thống",
-		newspaperEdition: "Chuyên trang Nghề nghiệp",
 	},
 };

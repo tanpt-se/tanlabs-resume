@@ -56,6 +56,8 @@
 }
 
 @theme inline {
+	--font-headline: var(--font-headline);
+	--font-body: var(--font-body);
 	--font-sans: var(--font-headline);
 	--font-serif: var(--font-body);
 	--color-background: var(--background);
@@ -104,8 +106,7 @@
 	}
 
 	body {
-		@apply bg-background text-base text-foreground antialiased;
-		font-family: var(--font-body);
+		@apply bg-background font-body text-base text-foreground antialiased;
 		overflow-x: hidden;
 	}
 
@@ -116,8 +117,26 @@
 	h5,
 	h6,
 	button,
-	[data-slot="dialog-title"] {
+	input,
+	select,
+	textarea,
+	label,
+	th,
+	[data-slot="button"],
+	[data-slot="badge"],
+	[data-slot="card-title"],
+	[data-slot="dialog-title"],
+	[data-slot="dropdown-menu-label"] {
 		font-family: var(--font-headline);
+	}
+
+	p,
+	li,
+	td,
+	blockquote,
+	[data-slot="card-description"],
+	[data-slot="dialog-description"] {
+		font-family: var(--font-body);
 	}
 
 	.resume-preview-content {
@@ -160,6 +179,11 @@
 	.newspaper-headline,
 	.newspaper-kicker {
 		font-family: var(--font-headline);
+	}
+
+	.font-body,
+	.newspaper-body {
+		font-family: var(--font-body);
 	}
 
 	.newspaper-page p,

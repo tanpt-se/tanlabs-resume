@@ -24,7 +24,7 @@ export default function ResumePage() {
 		<div className="newspaper-page min-h-screen bg-background">
 			<div className="px-4 pt-2 pb-24">
 				<div className="@container resume-preview-content mx-auto max-w-5xl space-y-6 px-2 pt-2 pb-4 @md:px-4 @md:pt-3 @md:pb-6">
-					<ResumeHeader profile={profile} labels={labels} />
+					<ResumeHeader profile={profile} />
 
 					<div className="space-y-8">
 						<ResumeSection

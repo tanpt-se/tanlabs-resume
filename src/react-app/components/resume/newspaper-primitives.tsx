@@ -6,12 +6,14 @@ import { cn } from "@/lib/utils";
 
 export function NewspaperDivider() {
 	return (
-		<p
+		<div
 			aria-hidden
-			className="font-headline text-center text-sm font-bold tracking-[0.55em] text-muted-foreground"
+			className="newspaper-divider flex items-center gap-4 py-1"
 		>
-			* * *
-		</p>
+			<div className="h-px flex-1 bg-foreground/25" />
+			<SkillIcon skill="React" monochrome className="size-4 shrink-0" />
+			<div className="h-px flex-1 bg-foreground/25" />
+		</div>
 	);
 }
 

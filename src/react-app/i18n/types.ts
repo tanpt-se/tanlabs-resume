@@ -112,5 +112,4 @@ export type ResumeUiLabels = {
 	themeLight: string;
 	themeDark: string;
 	themeSystem: string;
-	newspaperEdition: string;
 };

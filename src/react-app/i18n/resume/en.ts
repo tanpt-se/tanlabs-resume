@@ -1,5 +1,7 @@
 import type { ResumeContent } from "../types";
 
+import { UPRIDE_STORE_COLLECTED } from "./upride-store-collected";
+
 export const resumeEn: ResumeContent = {
 	profile: {
 		name: "Phạm Trọng Tận",
@@ -61,7 +63,7 @@ export const resumeEn: ResumeContent = {
 	projects: [
 		{
 			name: "A-NAVI",
-			company: "AMAX",
+			company: "AMAX Co., Ltd.",
 			market: "Japan",
 			period: "Mar 2024 – Mar 2025",
 			domain: "Real Estate",
@@ -89,6 +91,36 @@ export const resumeEn: ResumeContent = {
 				"Quality Optimization: Set up automated code quality checks by integrating ESLint/Prettier into GitLab CI, successfully cutting down team review effort by 20%.",
 				"UI/UX Implementation: Collaborated with designers to review Figma technical feasibility, converting complex designs into high-performance, production-ready web and mobile interfaces.",
 				"Feature Integration: Integrated LiveChat.com SDK across platforms to support real-time customer communication and boost user engagement.",
+			],
+		},
+		{
+			name: "레드캡 모빌리티",
+			company: "RedCapTour Co., Ltd.",
+			market: "South Korea",
+			period: "Sep 2023 – Jun 2024",
+			domain: "Fleet Mobility & Telematics",
+			description:
+				"Developed 레드캡 모빌리티 (RedCap Mobility), a corporate fleet management application built with LG Electronics (LGE) for RedCapTour. The solution enabled enterprise users to reserve, dispatch, and return shared business vehicles, control smart door access from mobile, and monitor real-time location, trip history, and driving logs through integrated web and mobile experiences.",
+			techStack: [
+				"React",
+				"React Native",
+				"TypeScript",
+				"React Query",
+				"Redux Toolkit",
+				"AWS",
+				"GitLab CI",
+				"Firebase",
+				"Figma",
+				"Axios",
+			],
+			position: "Sub-Technical Leader",
+			teamSize: "5 members",
+			responsibilities: [
+				"Mobile & Frontend Leadership: Led React Native delivery for the RedCap Mobility (RMS) app, coordinating architecture, implementation quality, and release planning with Korean client and LGE stakeholders.",
+				"Fleet Operations UX: Built reservation, dispatch, return, and vehicle-control flows for corporate car-sharing and fleet monitoring use cases.",
+				"Real-Time Monitoring: Implemented dashboards and mobile views for live vehicle status, trip records, and operational visibility across shared fleet assets.",
+				"Cross-Team Collaboration: Worked with backend, QA, and LG Electronics partners to validate telematics integrations, data flows, and production readiness.",
+				"UI/UX Delivery: Reviewed Figma designs for technical feasibility and converted complex fleet-management workflows into stable, production-quality interfaces.",
 			],
 		},
 		{
@@ -124,8 +156,38 @@ export const resumeEn: ResumeContent = {
 			],
 		},
 		{
+			name: UPRIDE_STORE_COLLECTED.projectName,
+			company: UPRIDE_STORE_COLLECTED.developer,
+			market: UPRIDE_STORE_COLLECTED.market.en,
+			period: UPRIDE_STORE_COLLECTED.period.en,
+			domain: "Creative Arts & Community",
+			description:
+				`Led frontend and React Native delivery for UPride, a global creative arts community app published on the App Store by ${UPRIDE_STORE_COLLECTED.developer}. The platform enables users to showcase artwork, run sponsored art projects, discover creative jobs, and build talent networks across cultures. Delivered production-ready mobile features integrated with backend APIs, push notifications, and release monitoring.`,
+			techStack: [
+				"React Native",
+				"TypeScript",
+				"React Query",
+				"Redux Toolkit",
+				"NestJS",
+				"AWS",
+				"GitLab CI",
+				"Firebase",
+				"Figma",
+				"Axios",
+			],
+			position: "Frontend / React Native Lead",
+			teamSize: "5 members",
+			responsibilities: [
+				"Led mobile and frontend delivery: Owned technical direction, architecture decisions, and sprint planning for a 5-member cross-functional team.",
+				"Shipped UPride to the App Store (iOS) for U Trend, supporting release workflows and post-launch stability.",
+				"Mobile architecture: Established React Native project structure, reusable component patterns, navigation flows, and release-ready build pipelines for iOS.",
+				"Quality & release: Enforced ESLint/Prettier standards in CI, supported App Store submission, and monitored post-release stability with client stakeholders.",
+				"UI/UX delivery: Reviewed Figma designs for feasibility and implemented production-ready interfaces for artwork sharing, projects, and creative job flows.",
+			],
+		},
+		{
 			name: "Jinjer Admin",
-			company: "Jinjer",
+			company: "Jinjer Co., Ltd.",
 			market: "Japan",
 			period: "Sep 2022 – Jun 2024",
 			domain: "HR Tech & Enterprise SaaS",

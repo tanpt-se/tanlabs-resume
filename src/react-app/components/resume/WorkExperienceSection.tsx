@@ -34,8 +34,8 @@ function ExperienceCard({
 				label={job.company}
 				header={
 					<div className="space-y-0.5">
-						<div className="flex items-baseline justify-between gap-3">
-							<h4 className="newspaper-headline min-w-0 text-base font-extrabold leading-tight @md:text-lg">
+						<div className="flex flex-col gap-1 md:flex-row md:items-baseline md:justify-between md:gap-3">
+							<h4 className="newspaper-headline min-w-0 text-base font-extrabold leading-tight md:text-lg">
 								{job.company}
 							</h4>
 							<p className="shrink-0 text-sm leading-snug text-muted-foreground">
@@ -65,13 +65,14 @@ export function WorkExperienceSection({
 
 	return (
 		<>
-			<div className="space-y-5 @md:hidden">
+			<div className="flex flex-col gap-5 md:hidden">
+				<WorkExperiencePhoto profile={profile} />
 				{experiences.map((job) => (
 					<ExperienceCard key={job.company} job={job} />
 				))}
 			</div>
 
-			<div className="hidden space-y-5 @md:block">
+			<div className="hidden flex-col gap-5 md:flex">
 				<div className="flex items-stretch gap-5">
 					<div className="flex w-1/2 min-w-0 self-stretch">
 						<WorkExperiencePhoto profile={profile} />

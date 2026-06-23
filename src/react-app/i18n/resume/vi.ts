@@ -1,5 +1,7 @@
 import type { ResumeContent } from "../types";
 
+import { UPRIDE_STORE_COLLECTED } from "./upride-store-collected";
+
 export const resumeVi: ResumeContent = {
 	profile: {
 		name: "Phạm Trọng Tận",
@@ -61,7 +63,7 @@ export const resumeVi: ResumeContent = {
 	projects: [
 		{
 			name: "A-NAVI",
-			company: "AMAX",
+			company: "AMAX Co., Ltd.",
 			market: "Nhật Bản",
 			period: "Thg 3 2024 – Thg 3 2025",
 			domain: "Bất động sản",
@@ -89,6 +91,36 @@ export const resumeVi: ResumeContent = {
 				"Tối ưu chất lượng: Thiết lập kiểm tra chất lượng code tự động bằng ESLint/Prettier trong GitLab CI, giảm 20% effort review của team.",
 				"Triển khai UI/UX: Phối hợp designer review khả thi kỹ thuật Figma, chuyển đổi thiết kế phức tạp thành giao diện web/mobile hiệu năng cao, sẵn sàng production.",
 				"Tích hợp tính năng: Tích hợp LiveChat.com SDK đa nền tảng để hỗ trợ giao tiếp khách hàng thời gian thực và tăng tương tác người dùng.",
+			],
+		},
+		{
+			name: "레드캡 모빌리티",
+			company: "RedCapTour Co., Ltd.",
+			market: "Hàn Quốc",
+			period: "Thg 9/2023 – Thg 6/2024",
+			domain: "Quản lý đội xe & Telematics",
+			description:
+				"Phát triển 레드캡 모빌리티 (RedCap Mobility), ứng dụng quản lý đội xe doanh nghiệp được xây dựng cùng LG Electronics (LGE) cho RedCapTour. Giải pháp cho phép người dùng doanh nghiệp đặt, điều phối và trả xe công vụ dùng chung, điều khiển mở cửa xe từ mobile, theo dõi vị trí thời gian thực, lịch sử hành trình và nhật ký vận hành qua web và mobile.",
+			techStack: [
+				"React",
+				"React Native",
+				"TypeScript",
+				"React Query",
+				"Redux Toolkit",
+				"AWS",
+				"GitLab CI",
+				"Firebase",
+				"Figma",
+				"Axios",
+			],
+			position: "Phó Trưởng nhóm Kỹ thuật",
+			teamSize: "5 thành viên",
+			responsibilities: [
+				"Lãnh đạo mobile & frontend: Dẫn dắt triển khai React Native cho app RedCap Mobility (RMS), điều phối kiến trúc, chất lượng triển khai và kế hoạch phát hành với khách hàng Hàn Quốc và đối tác LGE.",
+				"UX vận hành đội xe: Xây dựng luồng đặt xe, điều phối, trả xe và điều khiển xe cho car-sharing và giám sát đội xe doanh nghiệp.",
+				"Giám sát thời gian thực: Triển khai dashboard và giao diện mobile cho trạng thái xe, lịch sử hành trình và khả năng quan sát vận hành đội xe dùng chung.",
+				"Phối hợp đa team: Làm việc với backend, QA và LG Electronics để xác thực tích hợp telematics, luồng dữ liệu và sẵn sàng production.",
+				"Giao diện UI/UX: Review khả thi kỹ thuật Figma và chuyển quy trình quản lý đội xe phức tạp thành giao diện ổn định, chất lượng production.",
 			],
 		},
 		{
@@ -124,8 +156,38 @@ export const resumeVi: ResumeContent = {
 			],
 		},
 		{
+			name: UPRIDE_STORE_COLLECTED.projectName,
+			company: UPRIDE_STORE_COLLECTED.developer,
+			market: UPRIDE_STORE_COLLECTED.market.vi,
+			period: UPRIDE_STORE_COLLECTED.period.vi,
+			domain: "Nghệ thuật sáng tạo & Cộng đồng",
+			description:
+				`Dẫn dắt triển khai frontend và React Native cho UPride — app cộng đồng nghệ thuật sáng tạo toàn cầu, đang phát hành trên App Store bởi ${UPRIDE_STORE_COLLECTED.developer}. Nền tảng giúp người dùng chia sẻ tác phẩm, vận hành dự án nghệ thuật có tài trợ, tìm việc sáng tạo và xây dựng mạng lưới tài năng đa văn hóa. Triển khai tính năng mobile production tích hợp API backend, push notification và giám sát phát hành.`,
+			techStack: [
+				"React Native",
+				"TypeScript",
+				"React Query",
+				"Redux Toolkit",
+				"NestJS",
+				"AWS",
+				"GitLab CI",
+				"Firebase",
+				"Figma",
+				"Axios",
+			],
+			position: "Frontend / React Native Lead",
+			teamSize: "5 thành viên",
+			responsibilities: [
+				"Dẫn dắt giao hàng mobile & frontend: Phụ trách định hướng kỹ thuật, quyết định kiến trúc và lập kế hoạch sprint cho team đa chức năng 5 người.",
+				"Phát hành UPride lên App Store (iOS) cho U Trend, hỗ trợ quy trình release và ổn định sau phát hành.",
+				"Kiến trúc mobile: Thiết lập cấu trúc dự án React Native, pattern component tái sử dụng, luồng navigation và pipeline build sẵn sàng production cho iOS.",
+				"Chất lượng & phát hành: Áp dụng chuẩn ESLint/Prettier trong CI, hỗ trợ submit App Store và giám sát ổn định sau phát hành với phía khách hàng.",
+				"Giao diện UI/UX: Review khả thi kỹ thuật thiết kế Figma và triển khai giao diện sẵn sàng production cho chia sẻ tác phẩm, dự án và luồng tìm việc sáng tạo.",
+			],
+		},
+		{
 			name: "Jinjer Admin",
-			company: "Jinjer",
+			company: "Jinjer Co., Ltd.",
 			market: "Nhật Bản",
 			period: "Thg 9 2022 – Thg 6 2024",
 			domain: "HR Tech & SaaS doanh nghiệp",
