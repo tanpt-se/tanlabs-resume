@@ -1,28 +1,17 @@
-import { memo } from "react";
-
 import { AppBootLoader } from "./components/AppBootLoader";
-import { FabBubbles } from "./components/FabBubbles";
 import { ReadingProgressBar } from "./components/ReadingProgressBar";
 import ResumePage from "./components/ResumePage";
-import { LocaleProvider } from "./providers/locale-provider";
+import { SettingsBubble } from "./components/SettingsBubble";
 import { ThemeProvider } from "./providers/theme-provider";
-
-const AppBelowTheme = memo(function AppBelowTheme() {
-	return (
-		<LocaleProvider>
-			<AppBootLoader>
-				<ResumePage />
-			</AppBootLoader>
-			<ReadingProgressBar />
-			<FabBubbles />
-		</LocaleProvider>
-	);
-});
 
 function App() {
 	return (
 		<ThemeProvider>
-			<AppBelowTheme />
+			<AppBootLoader>
+				<ResumePage />
+			</AppBootLoader>
+			<ReadingProgressBar />
+			<SettingsBubble />
 		</ThemeProvider>
 	);
 }

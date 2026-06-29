@@ -4,7 +4,7 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
-import type { Project, ResumeUiLabels } from "@/i18n/types";
+import type { Project, ResumeUiLabels } from "@/i18n";
 
 import { ArticleParagraphs, ProjectSection } from "./newspaper-primitives";
 import { ProjectMetaPanel } from "./ProjectMetaPanel";
@@ -31,8 +31,18 @@ export function ProjectCard({ project, labels }: ProjectCardProps) {
 					</p>
 				</ProjectSection>
 
-				<ProjectSection label={labels.keyResponsibilities}>
-					<ArticleParagraphs items={project.responsibilities} />
+				<ProjectSection
+					label={labels.keyResponsibilities}
+					collapsible
+					defaultExpanded={false}
+				>
+					{project.responsibilities.length > 0 ? (
+						<ArticleParagraphs items={project.responsibilities} />
+					) : (
+						<p className="newspaper-body text-sm italic text-muted-foreground">
+							{labels.contentUpdating}
+						</p>
+					)}
 				</ProjectSection>
 			</CardContent>
 		</Card>

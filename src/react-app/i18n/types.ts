@@ -1,5 +1,3 @@
-export type Locale = "en" | "vi";
-
 export type ThemeMode = "light" | "dark" | "system";
 
 export type ResolvedTheme = "light" | "dark";
@@ -24,16 +22,31 @@ export type Experience = {
 	highlights: string[];
 };
 
+export type ProjectStorePlatform = "google-play" | "app-store" | "web";
+
+export type ProjectStoreLink = {
+	platform: ProjectStorePlatform;
+	title: string;
+	url: string;
+};
+
+export type ProjectTeamMember = {
+	count: number;
+	role: string;
+};
+
 export type Project = {
 	name: string;
 	company: string;
+	clientUrl?: string;
 	market: string;
 	period: string;
 	domain: string;
 	description: string;
+	storeLinks?: ProjectStoreLink[];
 	techStack: string[];
 	position: string;
-	teamSize: string;
+	teamMembers: ProjectTeamMember[];
 	responsibilities: string[];
 };
 
@@ -41,10 +54,12 @@ export type SkillCategoryId =
 	| "frontend"
 	| "mobile"
 	| "stateManagement"
+	| "uiUx"
 	| "backend"
+	| "database"
 	| "cloud"
 	| "devops"
-	| "uiUx"
+	| "devOps"
 	| "methodology";
 
 export type Skill = {
@@ -63,7 +78,6 @@ export type Profile = {
 	location: string;
 	phone: string;
 	email: string;
-	eyebrow: string;
 	birthDate: string;
 	photoCaption: string;
 };
@@ -84,7 +98,10 @@ export type SkillCategoryLabels = Record<SkillCategoryId, string>;
 export type ResumeUiLabels = {
 	skillSetAppendix: string;
 	skillSetDescription: string;
+	yearUnit: string;
 	yearsUnit: string;
+	monthUnit: string;
+	monthsUnit: string;
 	skillColumn: string;
 	experienceColumn: string;
 	skillCategories: SkillCategoryLabels;
@@ -101,14 +118,12 @@ export type ResumeUiLabels = {
 	projectDomain: string;
 	projectRole: string;
 	projectOverview: string;
+	projectReferences: string;
 	techStack: string;
 	keyResponsibilities: string;
-	printPdf: string;
+	contentUpdating: string;
 	theme: string;
-	language: string;
 	settings: string;
-	localeEn: string;
-	localeVi: string;
 	themeLight: string;
 	themeDark: string;
 	themeSystem: string;

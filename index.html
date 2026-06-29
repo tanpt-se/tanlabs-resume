@@ -100,8 +100,7 @@
 						window.matchMedia("(prefers-color-scheme: dark)").matches);
 				document.documentElement.classList.toggle("dark", isDark);
 
-				var locale = localStorage.getItem("resume-locale") || "en";
-				document.documentElement.lang = locale;
+				document.documentElement.lang = "en";
 
 				document.body.classList.add("boot-loading");
 			})();

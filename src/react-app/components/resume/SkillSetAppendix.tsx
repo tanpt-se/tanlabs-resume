@@ -2,7 +2,8 @@ import { useMemo } from "react";
 
 import { SkillIcon } from "@/components/SkillIcon";
 import { cn } from "@/lib/utils";
-import type { ResumeUiLabels, SkillCategory } from "@/i18n/types";
+import { formatSkillYears, sortSkills } from "@/lib/skill-appendix";
+import type { ResumeUiLabels, SkillCategory } from "@/i18n";
 
 import { ResumeSection } from "./ResumeSection";
 
@@ -16,7 +17,7 @@ export function SkillSetAppendix({ labels, skillCategories }: SkillSetAppendixPr
 		() =>
 			skillCategories.map((category) => ({
 				...category,
-				skills: [...category.skills].sort((a, b) => b.years - a.years),
+				skills: sortSkills(category.skills, category.id),
 			})),
 		[skillCategories],
 	);
@@ -69,7 +70,7 @@ export function SkillSetAppendix({ labels, skillCategories }: SkillSetAppendixPr
 												</div>
 											</td>
 											<td className="px-3 py-2 text-right text-xs font-medium tabular-nums text-muted-foreground">
-												{skill.years} {labels.yearsUnit}
+												{formatSkillYears(skill.years, labels)}
 											</td>
 										</tr>
 									))}

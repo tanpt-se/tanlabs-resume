@@ -1,24 +1,7 @@
 import { cn } from "@/lib/utils";
-import type { Experience, Profile } from "@/i18n/types";
+import type { Experience, Profile } from "@/i18n";
 
-import { ArticleParagraphs, ProjectSection } from "./newspaper-primitives";
-
-function WorkExperiencePhoto({ profile }: { profile: Profile }) {
-	return (
-		<figure className="newspaper-photo">
-			<div className="newspaper-photo__frame">
-				<img
-					src="/work-photo.png"
-					alt={profile.name}
-					className="newspaper-photo__image"
-				/>
-			</div>
-			<figcaption className="newspaper-photo__caption">
-				{profile.photoCaption}
-			</figcaption>
-		</figure>
-	);
-}
+import { ArticleParagraphs, NewspaperPhoto, ProjectSection } from "./newspaper-primitives";
 
 function ExperienceCard({
 	job,
@@ -66,7 +49,11 @@ export function WorkExperienceSection({
 	return (
 		<>
 			<div className="flex flex-col gap-5 md:hidden">
-				<WorkExperiencePhoto profile={profile} />
+				<NewspaperPhoto
+					src="/work-photo.png"
+					alt={profile.name}
+					caption={profile.photoCaption}
+				/>
 				{experiences.map((job) => (
 					<ExperienceCard key={job.company} job={job} />
 				))}
@@ -75,7 +62,11 @@ export function WorkExperienceSection({
 			<div className="hidden flex-col gap-5 md:flex">
 				<div className="flex items-stretch gap-5">
 					<div className="flex w-1/2 min-w-0 self-stretch">
-						<WorkExperiencePhoto profile={profile} />
+						<NewspaperPhoto
+							src="/work-photo.png"
+							alt={profile.name}
+							caption={profile.photoCaption}
+						/>
 					</div>
 					<div className="flex w-1/2 min-w-0 self-stretch">
 						{primaryExperience ? (

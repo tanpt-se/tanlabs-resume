@@ -1,8 +1,32 @@
-import type { ReactNode } from "react";
+import { useState, type ReactNode } from "react";
+import { ChevronDown } from "lucide-react";
+
+import type { ProjectTeamMember } from "@/i18n";
 
 import { SkillIcon } from "@/components/SkillIcon";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
+
+export function NewspaperPhoto({
+	src,
+	alt,
+	caption,
+	className,
+}: {
+	src: string;
+	alt: string;
+	caption: string;
+	className?: string;
+}) {
+	return (
+		<figure className={cn("newspaper-photo", className)}>
+			<div className="newspaper-photo__frame">
+				<img src={src} alt={alt} className="newspaper-photo__image" />
+			</div>
+			<figcaption className="newspaper-photo__caption">{caption}</figcaption>
+		</figure>
+	);
+}
 
 export function NewspaperDivider() {
 	return (
@@ -13,6 +37,28 @@ export function NewspaperDivider() {
 			<div className="h-px flex-1 bg-foreground/25" />
 			<SkillIcon skill="React" monochrome className="size-4 shrink-0" />
 			<div className="h-px flex-1 bg-foreground/25" />
+		</div>
+	);
+}
+
+export function MetaPlaceholder() {
+	return <span className="text-sm text-muted-foreground">—</span>;
+}
+
+export function TeamMemberList({ items }: { items: ProjectTeamMember[] }) {
+	return (
+		<div className="flex flex-wrap gap-1.5">
+			{items.map((item) => (
+				<Badge
+					key={item.role}
+					variant="outline"
+					className="gap-1 rounded-none font-normal tabular-nums"
+				>
+					<span className="font-semibold text-foreground">{item.count}</span>
+					<span className="text-muted-foreground">×</span>
+					<span>{item.role}</span>
+				</Badge>
+			))}
 		</div>
 	);
 }
@@ -50,6 +96,8 @@ export function ProjectSection({
 	headerAside,
 	variant = "plain",
 	stackedHeader = false,
+	collapsible = false,
+	defaultExpanded = true,
 }: {
 	label: string;
 	children: ReactNode;
@@ -58,7 +106,20 @@ export function ProjectSection({
 	headerAside?: ReactNode;
 	variant?: "plain" | "boxed";
 	stackedHeader?: boolean;
+	collapsible?: boolean;
+	defaultExpanded?: boolean;
 }) {
+	const [expanded, setExpanded] = useState(defaultExpanded);
+
+	const subhead = (
+		<div className="article-subhead min-w-0">
+			<span className="article-subhead__mark" aria-hidden>
+				&gt;
+			</span>
+			<h4 className={cn(uppercase && "uppercase")}>{label}</h4>
+		</div>
+	);
+
 	if (variant === "boxed") {
 		return (
 			<section className="flex h-full w-full min-h-0 flex-col overflow-hidden border border-foreground/25 bg-card">
@@ -97,21 +158,34 @@ export function ProjectSection({
 
 	return (
 		<section className="space-y-3">
-			<div
-				className={cn(
-					headerAside &&
-						"space-y-2 @md:flex @md:items-start @md:justify-between @md:gap-4 @md:space-y-0",
-				)}
-			>
-				<div className="article-subhead min-w-0">
-					<span className="article-subhead__mark" aria-hidden>
-						&gt;
-					</span>
-					<h4 className={cn(uppercase && "uppercase")}>{label}</h4>
+			{collapsible ? (
+				<button
+					type="button"
+					onClick={() => setExpanded((prev) => !prev)}
+					aria-expanded={expanded}
+					className="flex w-full min-w-0 cursor-pointer items-center justify-between gap-3 text-left"
+				>
+					{subhead}
+					<ChevronDown
+						aria-hidden
+						className={cn(
+							"size-4 shrink-0 text-muted-foreground transition-transform duration-200",
+							expanded && "rotate-180",
+						)}
+					/>
+				</button>
+			) : (
+				<div
+					className={cn(
+						headerAside &&
+							"space-y-2 @md:flex @md:items-start @md:justify-between @md:gap-4 @md:space-y-0",
+					)}
+				>
+					{subhead}
+					{headerAside}
 				</div>
-				{headerAside}
-			</div>
-			<div>{children}</div>
+			)}
+			{(!collapsible || expanded) && <div>{children}</div>}
 		</section>
 	);
 }

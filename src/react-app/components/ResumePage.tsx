@@ -5,10 +5,9 @@ import { ResumeHeader } from "@/components/resume/ResumeHeader";
 import { ResumeSection } from "@/components/resume/ResumeSection";
 import { SkillSetAppendix } from "@/components/resume/SkillSetAppendix";
 import { WorkExperienceSection } from "@/components/resume/WorkExperienceSection";
-import { useLocale } from "@/providers/locale-provider";
+import { resumeContent, uiLabels } from "@/i18n";
 
 export default function ResumePage() {
-	const { content, labels } = useLocale();
 	const {
 		profile,
 		summary,
@@ -18,7 +17,7 @@ export default function ResumePage() {
 		education,
 		certifications,
 		skillCategories,
-	} = content;
+	} = resumeContent;
 
 	return (
 		<div className="newspaper-page min-h-screen bg-background">
@@ -28,7 +27,7 @@ export default function ResumePage() {
 
 					<div className="space-y-8">
 						<ResumeSection
-							title={labels.professionalSummary}
+							title={uiLabels.professionalSummary}
 							contentClassName="newspaper-drop-cap space-y-4 text-sm leading-relaxed text-muted-foreground"
 						>
 							{summary.map((paragraph) => (
@@ -36,15 +35,15 @@ export default function ResumePage() {
 							))}
 						</ResumeSection>
 
-						<ResumeSection title={labels.workExperience} contentClassName="space-y-5">
+						<ResumeSection title={uiLabels.workExperience} contentClassName="space-y-5">
 							<WorkExperienceSection profile={profile} experiences={experiences} />
 						</ResumeSection>
 
-						<ResumeSection title={labels.highlightProjects} contentClassName="space-y-6">
+						<ResumeSection title={uiLabels.highlightProjects} contentClassName="space-y-6">
 							{projects.map((project, index) => (
 								<div key={project.name} className="space-y-6">
 									{index > 0 && <NewspaperDivider />}
-									<ProjectCard project={project} labels={labels} />
+									<ProjectCard project={project} labels={uiLabels} />
 								</div>
 							))}
 						</ResumeSection>
@@ -52,7 +51,7 @@ export default function ResumePage() {
 						<NewspaperDivider />
 
 						<ResumeBottomGrid
-							labels={labels}
+							labels={uiLabels}
 							languages={languages}
 							education={education}
 							certifications={certifications}
@@ -60,7 +59,7 @@ export default function ResumePage() {
 
 						<NewspaperDivider />
 
-						<SkillSetAppendix labels={labels} skillCategories={skillCategories} />
+						<SkillSetAppendix labels={uiLabels} skillCategories={skillCategories} />
 					</div>
 				</div>
 			</div>

@@ -1,6 +1,6 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 
-import type { Profile } from "@/i18n/types";
+import type { Profile } from "@/i18n";
 
 type ResumeHeaderProps = {
 	profile: Profile;

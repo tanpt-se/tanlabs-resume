@@ -4,24 +4,10 @@ import type {
 	Certification,
 	Education,
 	ResumeUiLabels,
-} from "@/i18n/types";
+} from "@/i18n";
 
+import { NewspaperPhoto } from "./newspaper-primitives";
 import { ResumeSection } from "./ResumeSection";
-
-function EducationPhoto({ education }: { education: Education }) {
-	return (
-		<figure className="newspaper-photo h-full min-h-48">
-			<div className="newspaper-photo__frame">
-				<img
-					src="/education-photo.png"
-					alt={education.photoCaption}
-					className="newspaper-photo__image"
-				/>
-			</div>
-			<figcaption className="newspaper-photo__caption">{education.photoCaption}</figcaption>
-		</figure>
-	);
-}
 
 type ResumeBottomGridProps = {
 	labels: ResumeUiLabels;
@@ -73,7 +59,12 @@ export function ResumeBottomGrid({
 				</ResumeSection>
 			</div>
 
-			<EducationPhoto education={education} />
+			<NewspaperPhoto
+				src="/education-photo.png"
+				alt={education.photoCaption}
+				caption={education.photoCaption}
+				className="h-full min-h-48"
+			/>
 		</div>
 	);
 }
