@@ -42,7 +42,6 @@ function readStoredTheme(): ThemeMode {
 }
 
 type ThemeContextValue = {
-	theme: ResolvedTheme;
 	themeMode: ThemeMode;
 	setThemeMode: (mode: ThemeMode) => void;
 };
@@ -53,14 +52,14 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 	const [themeMode, setThemeModeState] = useState<ThemeMode>(readStoredTheme);
 	const [systemTheme, setSystemTheme] = useState<ResolvedTheme>(getSystemTheme);
 
-	const theme = useMemo(
+	const resolvedTheme = useMemo(
 		() => resolveTheme(themeMode, systemTheme),
 		[themeMode, systemTheme],
 	);
 
 	useLayoutEffect(() => {
-		applyTheme(theme);
-	}, [theme]);
+		applyTheme(resolvedTheme);
+	}, [resolvedTheme]);
 
 	useEffect(() => {
 		if (themeMode !== "system") {
@@ -84,8 +83,8 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 	}, []);
 
 	const value = useMemo(
-		() => ({ theme, themeMode, setThemeMode }),
-		[theme, themeMode, setThemeMode],
+		() => ({ themeMode, setThemeMode }),
+		[themeMode, setThemeMode],
 	);
 
 	return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;

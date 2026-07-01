@@ -9,7 +9,7 @@ import { UPRIDE_STORE_COLLECTED } from "./upride-store-collected";
 export const resumeContent: ResumeContent = {
 	profile: {
 		name: "Phạm Trọng Tận",
-		title: "React Native Lead / Frontend Leader",
+		title: "Frontend & React Native Technical Lead",
 		location: "Tay Hoa - Dak Lak",
 		phone: "(+84) 378 542 540",
 		email: "phamtrongtandhcn2@gmail.com",
@@ -18,9 +18,10 @@ export const resumeContent: ResumeContent = {
 		birthDate: "Sep 30, 1997",
 	},
 	summary: [
-		"Senior Technical Leadership: 7+ years of experience building scalable enterprise web and mobile applications; successfully led cross-functional teams of up to 20 engineers in Agile/Scrum environments for global markets.",
-		"Architecture & Engineering Excellence: Expert in front-end system design, reusable component libraries, and automated CI/CD quality gates using React, Next.js, Vue.js, TypeScript, and modern state management.",
-		"UX Engineering Mindset: Strong UI/UX sense with hands-on experience bridging the gap between Figma designs and technical feasibility to deliver real-time dashboards and complex workflow interfaces.",
+		"Frontend & React Native Technical Lead with 7 years of experience building scalable web and mobile applications using React, React Native, Next.js, and TypeScript.",
+		"Led Agile teams of up to 20 engineers, driving frontend architecture, code quality, technical direction, and successful product delivery for enterprise clients across Japan, Korea, Singapore, and the Netherlands.",
+		"Experienced in designing high-performance applications with real-time communication, BLE/IoT integration, offline-first architecture, and OTA deployment, while collaborating closely with product managers, designers, QA engineers, and global stakeholders.",
+		"Passionate about building scalable frontend architecture, mentoring engineers, and delivering products that balance business goals, user experience, and engineering excellence.",
 	],
 	experiences: [
 		{
@@ -28,11 +29,11 @@ export const resumeContent: ResumeContent = {
 			role: "Frontend / React Native Lead",
 			period: "Apr 2025 – Mar 2026",
 			highlights: [
-				"Led React Native and frontend delivery for Japanese enterprise clients, owning mobile architecture, technical direction, implementation quality, and delivery planning.",
-				"Managed mobile production release support, including Android/iOS build verification, deployment coordination, app store publishing support, and post-release monitoring.",
-				"Defined frontend/mobile development standards, reusable component strategy, coding practices, and scalable team workflows.",
-				"Reviewed Figma designs, checked technical feasibility, and ensured high-quality implementation across web and mobile interfaces.",
-				"Coordinated with backend, QA, UX, and client stakeholders to deliver stable production-ready features aligned with business requirements.",
+				"Led React Native and frontend delivery for A-NAVI (Japan), owning mobile architecture, technical direction, and delivery planning.",
+				"Managed production release support — Android/iOS builds, app store publishing, and post-release monitoring.",
+				"Handled project proposals and estimation for new initiatives.",
+				"Built and optimized the company website gcode.jp, including SEO improvements.",
+				"Reviewed Figma designs, checked technical feasibility, and ensured high-quality implementation.",
 			],
 		},
 		{
@@ -40,14 +41,13 @@ export const resumeContent: ResumeContent = {
 			role: "Frontend / React Native Lead",
 			period: "Sep 2022 – Mar 2025",
 			highlights: [
-				"Led frontend and React Native development for enterprise Japanese, Singaporean, and Korean clients.",
-				"Built scalable web and cross-platform mobile applications using React, React Native, Next.js, TypeScript, and cloud-based services.",
-				"Acted as frontend/mobile owner for assigned modules, making technical decisions and coordinating implementation with backend, QA, UX, and client-side teams.",
-				"Improved mobile performance, reusable component architecture, and production delivery quality across web and mobile platforms.",
-				"Mentored junior developers through structured code reviews, technical guidance, and frontend/mobile development best practices.",
-				"Served as a Guest Lecturer at Quy Nhon University and FPT University, training IT students on React Native and modern Front-End development (2023 – 2024).",
-				"Participated in the bidding and pre-sales process, successfully winning over 4 major projects for the company (including LG CNS and Honda).",
-				"Led the Training Department at the Business Unit level, establishing technical playbooks and scaling learning programs for engineering teams (2023 - 2025).",
+				"Led React Native and frontend delivery for 6 projects serving Japanese, Korean, and Singaporean clients (AMO, UPRIDE, Research 360, Jinjer Admin, Maintage, Honda 26M).",
+				"Built scalable cross-platform mobile and web apps using React Native, React, Vue.js, TypeScript, and cloud services.",
+				"Acted as frontend/mobile owner, making technical decisions and coordinating with backend, QA, UX, and client-side teams.",
+				"Participated in project proposals and pre-sales, contributing to winning multiple major projects (including LG CNS and Honda).",
+				"Mentored junior developers through structured code reviews, technical guidance, and frontend/mobile best practices.",
+				"Served as Guest Lecturer at Quy Nhon University and FPT University, training IT students on React Native and modern Front-End development (2023 – 2024).",
+				"Led the Training Department at Business Unit level, establishing technical playbooks and scaling learning programs for engineering teams (2023 – 2025).",
 			],
 		},
 		{
@@ -55,11 +55,13 @@ export const resumeContent: ResumeContent = {
 			role: "React Native Engineer",
 			period: "Aug 2019 – Mar 2022",
 			highlights: [
-				"Developed and maintained cross-platform mobile and web applications for Dutch energy management systems.",
-				"Built responsive dashboards and mobile features using React Native, Angular, TypeScript, and Azure-based services.",
-				"Contributed to React Native architecture adoption for cross-platform deployment and code reuse.",
-				"Migrated legacy JavaScript codebase to TypeScript, improving maintainability, type safety, and long-term scalability.",
-				"Collaborated directly with European stakeholders to clarify requirements, improve UX, and optimize system performance.",
+				"Sole React Native developer on Kikker Energie — a smart energy platform for a Dutch green supplier.",
+				"Migrated RN codebase from JavaScript to TypeScript; built real-time usage dashboards with D3.js/Chart.js.",
+				"Set up OTA deployment via Revopush (CodePush) for rapid production releases.",
+				"Used Firebase for remote config, debugging, and crash monitoring; enforced ESLint/Prettier code quality.",
+				"Worked directly with European stakeholders (Design, PO, QC, BA) to refine features.",
+				"Also served as Graphic Designer, creating UI mockups and visual assets.",
+				"Mentored juniors through code reviews and knowledge-sharing sessions.",
 			],
 		},
 	],
@@ -86,7 +88,7 @@ export const resumeContent: ResumeContent = {
 				},
 			],
 			techStack: ["Swift", "Kotlin", "React Native CLI", "Socket.IO", "Agile/Scrum", "Jira", "Figma", "GitLab", "NestJS", "Firebase", "AWS", "Next.js", "Tailwind CSS", "Redux Saga", "React Query", "PostgreSQL"],
-			position: "React Native Lead / Frontend Leader",
+			position: "Tech Lead",
 			teamMembers: [
 				{ count: 1, role: "PM" },
 				{ count: 1, role: "BE" },
@@ -94,13 +96,28 @@ export const resumeContent: ResumeContent = {
 				{ count: 2, role: "FE" },
 				{ count: 3, role: "QC" },
 			],
-			responsibilities: [
-				"Technical Leadership: Led a 5-member Frontend & Mobile team to develop a comprehensive PropTech platform (React Native, Web, Backend APIs, Admin modules), overseeing technical architecture and delivery planning.",
-				"Core Feature Development: Engineered key functionalities including real-time rental tracking, automated tax reporting for Japanese investors, and a secure digital repository for paperless contract management.",
-				"Resource Optimization: Spearheaded WebView integration within React Native to reuse Web UI layouts, slashing mobile development effort by 80% and accelerating product launch.",
-				"Quality Assurance: Automated code quality checks by integrating ESLint/Prettier into GitLab CI, successfully cutting down team code-review effort by 20%.",
-				"UI/UX & System Integration: Translated complex Figma designs into high-performance, production-ready interfaces and integrated the LiveChat SDK across platforms to boost real-time customer engagement.",
-			],
+			responsibilities: {
+				"Technical Leadership & Architecture": [
+					"Oversaw technical architecture and delivery planning for a comprehensive PropTech platform spanning React Native (mobile), Web, Backend APIs, and Admin modules.",
+					"Engineered real-time rental tracking, automated tax reporting for Japanese investors, and secure paperless contract management.",
+					"Spearheaded WebView integration within React Native to reuse Web UI layouts, reducing mobile development effort by 80%.",
+					"Leveraged Firebase for mobile monitoring, crash reporting, remote config, and push notifications via FCM.",
+					"Advised clients on system optimization strategies and handled OWASP security best practices to ensure robust application security.",
+				],
+				"Product Delivery & Engineering Excellence": [
+					"Automated code quality checks by integrating ESLint/Prettier into GitLab CI, cutting team code-review effort by 20%.",
+					"Handled end-to-end production builds and store deployment (iOS App Store / Google Play) independently.",
+				],
+				"Cross-functional Collaboration & UI/UX": [
+					"Translated complex Figma designs into high-performance, production-ready interfaces.",
+					"Integrated the LiveChat SDK across platforms to boost real-time customer engagement.",
+					"Worked directly with the Japanese client PM (Japanese-speaking) to align technical delivery with business requirements.",
+					"Authored system documentation; PM distributed to the entire team for alignment.",
+				],
+				"Team Mentorship & Agile Coordination": [
+					"Led a Frontend & Mobile cross-functional team through Agile delivery cycles, taking ownership of implementation quality and delivery schedules.",
+				],
+			},
 		},
 		{
 			name: "Honda 26M",
@@ -117,7 +134,30 @@ export const resumeContent: ResumeContent = {
 				{ count: 3, role: "PM" },
 				{ count: 5, role: "BA" },
 			],
-			responsibilities: [],
+			responsibilities: {
+				"Technical Leadership & Architecture": [
+					"Authored system analysis and design documentation for upgrading the Honda platform from version 23M (in production since 2023) to version 26M.",
+					"Produced data-flow diagrams and behavior diagrams for improvement and update workflows, ensuring version consistency and preventing system drift.",
+					"Designed ERD and UML diagrams using Excel and Draw.io to map system relationships and behavior.",
+				],
+				"Product Delivery & Engineering Excellence": [
+					"Ensured a non-disruptive upgrade path from 23M to 26M, maintaining live operations throughout the transition.",
+					"Used Excel to document and compare system behavior between old and new versions, creating traceable specifications.",
+					"Wrote user stories and acceptance criteria for development and QC teams.",
+					"Supported UAT (User Acceptance Testing) to validate upgrade quality.",
+					"Conducted risk assessment and impact analysis for the version upgrade.",
+				],
+				"Cross-functional Collaboration & UI/UX": [
+					"Analyzed and improved user behavior flows, acting as a PO to bridge user needs with technical implementation.",
+					"Used Figma to create and describe new UI mockups for the 26M upgrade, providing visual specifications for the development team.",
+					"Gathered requirements directly from Japanese and Singaporean clients, working with Global PM and BA team.",
+					"Facilitated demos and sprint reviews with clients and global stakeholders.",
+					"Authored API specifications and Postman collections for the development team.",
+				],
+				"Team Mentorship & Agile Coordination": [
+					"Conducted regular Knowledge Sharing Sessions (KSS) with the team to align understanding of system changes and upgrade strategies.",
+				],
+			},
 		},
 		{
 			name: "Maintage",
@@ -136,7 +176,22 @@ export const resumeContent: ResumeContent = {
 				{ count: 1, role: "PM" },
 				{ count: 4, role: "QC" },
 			],
-			responsibilities: [],
+			responsibilities: {
+				"Technical Leadership & Architecture": [
+					"Contributed to form validation and reactive data flows using RxJS within the Angular ecosystem.",
+					"Adjusted and fine-tuned CSS configurations to match design specifications and ensure consistent UI.",
+				],
+				"Product Delivery & Engineering Excellence": [
+					"Acted as debugger and production maintainer, identifying, triaging, and resolving runtime issues to ensure platform stability.",
+					"Enforced code quality via ESLint and Prettier across the project lifecycle.",
+				],
+				"Cross-functional Collaboration & UI/UX": [
+					"Participated in Figma design reviews with the Japanese client, providing technical feasibility feedback and ensuring design-to-code accuracy.",
+				],
+				"Team Mentorship & Agile Coordination": [
+					"Conducted knowledge-sharing sessions on common bugs, root causes, and safe deployment strategies — ensuring fixes could be rolled out without impacting system stability.",
+				],
+			},
 		},
 		{
 			name: "Research 360",
@@ -154,7 +209,29 @@ export const resumeContent: ResumeContent = {
 				{ count: 1, role: "BE" },
 				{ count: 3, role: "FE" },
 			],
-			responsibilities: [],
+			responsibilities: {
+				"Technical Leadership & Architecture": [
+					"Architected and built the entire frontend from scratch, establishing the project structure, component hierarchy, and data flow.",
+					"Implemented Authentication and Role-Based Access Control (RBAC) for secure, permission-aware routing across the platform.",
+					"Managed global state using Redux Toolkit for predictable and scalable state management.",
+					"Provided technical solutions and system design analysis as a BA, optimizing project architecture for scalability and maintainability.",
+					"Integrated REST APIs developed by the Korean team, ensuring seamless data flow between frontend and backend.",
+					"Optimized image handling from server, implementing efficient loading and caching strategies.",
+				],
+				"Product Delivery & Engineering Excellence": [
+					"Enforced code quality standards via ESLint and Prettier across the project lifecycle.",
+					"Managed version control for both BE and FE using GitHub + AWS versioning.",
+					"Monitored application logs and investigated production issues using AWS CloudWatch.",
+				],
+				"Cross-functional Collaboration & UI/UX": [
+					"Collaborated with the Korean (KR) design team on UI/UX, providing technical feasibility feedback and ensuring pixel-perfect implementation.",
+					"Worked cross-functionally with KR stakeholders for API integration and system architecture decisions.",
+				],
+				"Team Mentorship & Agile Coordination": [
+					"Guided and mentored junior developers throughout the project, improving code quality and team capability.",
+					"Acted as a bridge between technical and business sides, conducting solution analysis and system design like a BA.",
+				],
+			},
 		},
 		{
 			name: "Jinjer Admin",
@@ -172,24 +249,45 @@ export const resumeContent: ResumeContent = {
 					url: JINJER_STORE_COLLECTED.webApp.url,
 				},
 			],
-			techStack: ["Vue.js", "Pinia", "Agile/Scrum", "Jira", "Figma", "GitHub", "AWS", "Tailwind CSS", "Docker", "PostgreSQL"],
-			position: "Technical Leader",
+			techStack: ["Vue.js", "Pinia", "Agile/Scrum", "Jira", "Slack", "Figma", "GitHub", "AWS", "SendGrid", "Tailwind CSS", "Docker", "PostgreSQL"],
+			position: "Fullstack Tech Lead",
 			teamMembers: [
 				{ count: 1, role: "SA" },
 				{ count: 2, role: "PM" },
 				{ count: 1, role: "Sub PM" },
+				{ count: 1, role: "BrSE" },
+				{ count: 1, role: "Comtor" },
 				{ count: 3, role: "QC" },
 				{ count: 3, role: "FE" },
 				{ count: 3, role: "BE" },
 				{ count: 2, role: "BA" },
 			],
-			responsibilities: [
-				"Technical Leadership & Architecture: Led a 20-member fullstack development team; owned the technical direction, system architecture, database schema design, and secure role-based access control (RBAC) mechanisms.",
-				"DevOps Optimization: Streamlined CI/CD deployment pipelines, successfully reducing system deployment time by 30%.",
-				"Frontend Architecture (From Scratch): Architected the frontend application using Vue 3 and TypeScript; established core project structures, optimized state management via Pinia, and enforced strict frontend permission-aware routing.",
-				"Quality Assurance & AI Augmentation: Formulated and maintained robust unit testing strategies, leveraging GitHub Copilot to achieve ~90% test coverage across critical modules.",
-				"Performance & UI Delivery: Reviewed Figma designs for technical feasibility, converting complex layouts into high-performance, production-quality interfaces while optimizing rendering and image loading speeds.",
-			],
+			responsibilities: {
+				"Technical Leadership & Architecture": [
+					"Owned technical direction, system architecture, PostgreSQL database schema design, and secure role-based access control (RBAC).",
+					"Rewrote the entire frontend from scratch to upgrade from a legacy version to Vue 3 + TypeScript, establishing core project structures and optimizing state management via Pinia.",
+					"Built permission-aware routing across the admin portal.",
+					"Developed email templates using Node.js deployed on AWS Lambda, integrating SES + SNS for enterprise-grade email and notification delivery.",
+					"Utilized S3 for static asset storage and distribution; CloudWatch for system monitoring and log management.",
+					"Collaborated with the client's SA (Solution Architect) team to structure and debug email delivery configurations.",
+					"Investigated and managed system logs during incidents, ensuring fast root-cause tracing and recovery.",
+				],
+				"Product Delivery & Engineering Excellence": [
+					"Streamlined CI/CD deployment pipelines, reducing system deployment time by 30%.",
+					"Formulated unit testing strategies with GitHub Copilot, achieving ~90% test coverage across critical modules.",
+					"Configured Slack notifications for build and deployment pipelines, keeping the team informed of release status in real-time.",
+				],
+				"Cross-functional Collaboration & UI/UX": [
+					"Reviewed Figma designs for technical feasibility and converted complex layouts into production-quality interfaces.",
+					"Optimized rendering and image loading speeds for enterprise HR workflows.",
+					"Worked 100% with Japanese clients through comtors (interpreters) for official meetings; communicated directly in English via Slack with the SA team on architecture, API contracts, and technical solutions.",
+				],
+				"Team Mentorship & Agile Coordination": [
+					"Led a fullstack team of 20 engineers (with frequent personnel changes throughout the project lifecycle), managing Agile delivery and upholding engineering standards.",
+					"Mentored freshers and junior frontend engineers, covering fundamentals, code review practices, and best practices.",
+					"Organized multiple Knowledge Sharing Sessions (KSS) internally and wrote system documentation as a BA, ensuring comprehensive knowledge capture.",
+				],
+			},
 		},
 		{
 			name: UPRIDE_STORE_COLLECTED.projectName,
@@ -219,14 +317,33 @@ export const resumeContent: ResumeContent = {
 				{ count: 1, role: "BE" },
 				{ count: 2, role: "Mobile" },
 			],
-			responsibilities: [],
+			responsibilities: {
+				"Technical Leadership & Architecture": [
+					"Built interactive analytics dashboards using D3.js / Chart.js to visualize device usage time and user engagement metrics.",
+					"Architected a real-time chat system using Socket.IO for instant messaging between creators and supporters.",
+					"Implemented motion/animation-based reaction features for posts using React Native Reanimated or similar motion libraries, enhancing user engagement.",
+					"Designed an Offline-first architecture with intelligent caching strategies to ensure a smooth experience regardless of connectivity.",
+					"Optimized image delivery pipeline from server/CDN, implementing lazy loading, compression, and cache layers to reduce bandwidth and improve load times.",
+				],
+				"Product Delivery & Engineering Excellence": [
+					"Managed end-to-end production releases, from build through OTA updates and app store deployment.",
+					"Maintained code quality via ESLint and Prettier enforcement across the project lifecycle.",
+					"Used Firebase for remote config management, A/B testing feature flags, and runtime debugging.",
+					"Ensured production stability through proactive monitoring and crash resolution.",
+				],
+				"Cross-functional Collaboration & UI/UX": [
+					"Collaborated on ~50% of UI/UX design alongside an external design team, balancing creative vision with technical feasibility.",
+					"Worked directly with Product Owners and clients to gather requirements, validate features, and iterate on the product vision.",
+					"Converted design specifications into polished, production-ready social networking interfaces.",
+				],
+			},
 		},
 		{
 			name: "AMO",
 			company: "Penta Security",
 			clientUrl: "https://www.pentasecurity.com",
 			market: "South Korea",
-			period: "Aug 2022 – May 2023",
+			period: "Oct 2022 – May 2023",
 			domain: "R&D (Automotive & IoT)",
 			description:
 				"Contributed to the AMO Project, an innovative blockchain-based automotive data platform developed by Penta Security (AMO Labs). The project aimed to establish a decentralized \"Car Data Market,\" enabling the secure sharing, monetization, and exchange of vehicle data. By leveraging blockchain technology and advanced cryptography, the platform built a smart mobility ecosystem where drivers, auto manufacturers, and service providers can seamlessly interact, ensuring that user data is fairly valued and securely utilized.",
@@ -236,18 +353,42 @@ export const resumeContent: ResumeContent = {
 				{ count: 1, role: "PM" },
 				{ count: 1, role: "QC" },
 				{ count: 2, role: "React Native Devs" },
+				{ count: 1, role: "Comtor" },
 			],
-			responsibilities: [],
+			responsibilities: {
+				"Technical Leadership & Architecture": [
+					"Architected and built the entire React Native application from scratch, designing the system architecture, component tree, and data flow without legacy constraints.",
+					"Built custom data visualizations using D3.js / Chart.js to render vehicle route maps and driving frequency analytics.",
+					"Integrated BLE communication with OBD II devices to collect real-time vehicle telemetry (speed, fuel, diagnostics, etc.).",
+					"Implemented Web3 cryptography for end-to-end data encryption, ensuring secure transmission and storage of sensitive vehicle data within a decentralized marketplace.",
+					"Designed an Offline-first architecture, allowing data collection and queuing when disconnected, with seamless sync when connectivity is restored.",
+					"Engineered real-time data relay pipelines combining BLE → Socket.IO → NestJS backend, reflecting Bluetooth device data to the server in near-real-time.",
+					"Collaborated with the Korean team on NestJS API design and integration, replacing GraphQL with RESTful endpoints.",
+				],
+				"Product Delivery & Engineering Excellence": [
+					"Maintained code quality standards via ESLint and Prettier enforcement across the project lifecycle.",
+					"Managed internal release cycles via TestFlight (iOS) and APK (Android) for stakeholder review — no production distribution.",
+					"Ensured data security compliance through Web3 encryption and offline-first data handling patterns.",
+				],
+				"Cross-functional Collaboration & UI/UX": [
+					"Designed 100% of the UI/UX independently, translating the Car Data Market concept into intuitive user interfaces without a dedicated designer.",
+					"Coordinated with Korean stakeholders (Penta Security / AMO Labs) on API contracts, data models, and feature scoping.",
+				],
+				"Team Mentorship & Agile Coordination": [
+					"Mentored junior and fresher engineers throughout the project, helping them onboard and understand the blockchain/cryptography domain.",
+					"Balanced hands-on development with team training, ensuring knowledge transfer on Web3, BLE, and offline-first patterns.",
+				],
+			},
 		},
 		{
 			name: "Redcap Mobility",
 			company: "RedCapTour Co., Ltd.",
 			clientUrl: REDCAP_STORE_COLLECTED.websiteUrl,
 			market: "South Korea",
-			period: "Apr 2022 – Jul 2022",
+			period: "Jul 2022 – Sep 2022",
 			domain: "Fleet Mobility & Telematics",
 			description:
-				"Developed 레드캡 모빌리티 (RedCap Mobility), a comprehensive B2B corporate fleet management and mobility platform built in collaboration with LG Electronics (LGE) for RedCapTour. The solution was designed to digitize traditional vehicle management operations, optimizing operational efficiency by eliminating time-consuming manual paperwork and physical key handovers. By shifting to a smart management ecosystem, the platform successfully streamlined corporate car-sharing and integrated vehicle control for diverse enterprise clients.",
+				"Developed RedCap Mobility, a comprehensive B2B corporate fleet management and mobility platform built in collaboration with LG Electronics (LGE) for RedCapTour. The solution was designed to digitize traditional vehicle management operations, optimizing operational efficiency by eliminating time-consuming manual paperwork and physical key handovers. By shifting to a smart management ecosystem, the platform successfully streamlined corporate car-sharing and integrated vehicle control for diverse enterprise clients.",
 			storeLinks: [
 				{
 					platform: "google-play",
@@ -262,14 +403,39 @@ export const resumeContent: ResumeContent = {
 			],
 			techStack: ["Agile/Scrum", "Jira", "D3/Chart.js", "Figma", "GitHub", "GraphQL", "Firebase", "React Native CLI", "Socket.IO", "Redux Saga"],
 			position: "React Native Lead",
-			teamMembers: [],
-			responsibilities: [
-				"Mobile & Frontend Leadership: Led React Native delivery for the RedCap Mobility (RMS) app, coordinating architecture, implementation quality, and release planning with Korean client and LGE stakeholders.",
-				"Fleet Operations UX: Built reservation, dispatch, return, and vehicle-control flows for corporate car-sharing and fleet monitoring use cases.",
-				"Real-Time Monitoring: Implemented dashboards and mobile views for live vehicle status, trip records, and operational visibility across shared fleet assets.",
-				"Cross-Team Collaboration: Worked with backend, QA, and LG Electronics partners to validate telematics integrations, data flows, and production readiness.",
-				"UI/UX Delivery: Reviewed Figma designs for technical feasibility and converted complex fleet-management workflows into stable, production-quality interfaces.",
+			teamMembers: [
+				{ count: 1, role: "PM" },
+				{ count: 1, role: "QC" },
+				{ count: 2, role: "React Native Devs" },
+				{ count: 1, role: "Comtor" },
 			],
+			responsibilities: {
+				"Technical Leadership & Architecture": [
+					"Led React Native delivery for RedCap Mobility (RMS), coordinating architecture, implementation quality, and release planning.",
+					"Architected real-time data pipelines using Socket.IO to ingest live telemetry from vehicle devices, enabling instant fleet status updates.",
+					"Implemented Bluetooth Low Energy (BLE) integration for secure device-to-vehicle connectivity, bridging IoT hardware with the mobile app.",
+					"Led the team-wide migration from JavaScript to TypeScript, enforcing type safety across the codebase.",
+					"Integrated GraphQL for flexible and efficient API consumption, handling client-specific data schemas.",
+					"Built reservation, dispatch, return, and vehicle-control flows for corporate car-sharing use cases.",
+					"Implemented dashboards for live fleet status, trip records, and usage analytics using D3.js/Chart.js.",
+					"Optimized image capture and processing pipeline to handle user-uploaded photos efficiently.",
+				],
+				"Product Delivery & Engineering Excellence": [
+					"Managed OTA production releases via Revopush (CodePush), handling end-to-end build and deployment to production.",
+					"Enforced code quality gates using ESLint and Prettier before every build cycle.",
+					"Leveraged Firebase for runtime debugging, remote config, and crash monitoring.",
+					"Validated telematics integrations, data flows, and production readiness with backend, QA, and LG Electronics partners.",
+				],
+				"Cross-functional Collaboration & UI/UX": [
+					"Reviewed Figma designs for technical feasibility and converted fleet-management workflows into production-quality interfaces.",
+					"Coordinated delivery with Korean client (RedCapTour) and LGE stakeholders across time zones.",
+					"Worked closely with Design team and Product Owners to continuously refine UI/UX for fleet operators and drivers.",
+				],
+				"Team Mentorship & Agile Coordination": [
+					"Led and guided the React Native team through the JS-to-TypeScript migration, establishing new coding standards and review practices.",
+					"Coordinated cross-functional delivery across Design, PO, and QC teams to meet enterprise deadlines.",
+				],
+			},
 		},
 		{
 			name: "Kikker Energie",
@@ -303,7 +469,28 @@ export const resumeContent: ResumeContent = {
 				{ count: 4, role: "FE" },
 				{ count: 3, role: "Mobile" },
 			],
-			responsibilities: [],
+			responsibilities: {
+				"Technical Leadership & Architecture": [
+					"Led the migration of a React Native codebase from JavaScript to TypeScript, significantly improving type safety, code maintainability, and developer experience across the team.",
+					"Architected real-time data visualization components using D3.js and Chart.js to render complex gas/electricity usage charts for end-users.",
+					"Implemented deep linking to enable seamless navigation from push notifications and external links directly into specific app screens.",
+				],
+				"Product Delivery & Engineering Excellence": [
+					"Established OTA update distribution pipelines via Revopush (CodePush), handling production builds and direct uploads to ensure rapid, safe releases.",
+					"Enforced code quality standards by integrating ESLint and Prettier into the development workflow, catching issues before build.",
+					"Leveraged Firebase for runtime debugging, remote config management, and production monitoring.",
+					"Collaborated with QC/BA teams and supported Automation Test efforts to maintain high delivery quality.",
+				],
+				"Cross-functional Collaboration & UI/UX": [
+					"Partnered closely with Design team and Product Owners to continuously refine and optimize UI/UX for end-users, ensuring pixel-perfect, intuitive interfaces.",
+					"Configured and updated Angular frontend forms and UI layouts, bridging the gap between design specs and functional product.",
+					"Worked alongside cross-functional stakeholders (Design, PO, QC, BA) to translate requirements into deliverable features.",
+				],
+				"Team Mentorship & Agile Coordination": [
+					"Mentored and trained fresher and junior engineers through structured knowledge-sharing sessions, accelerating team capability growth.",
+					"Progressed from individual contributor to Team Lead, taking ownership of delivery schedules and code quality within the React Native track.",
+				],
+			},
 		},
 		{
 			name: "Freelance & Consulting",
@@ -331,16 +518,18 @@ export const resumeContent: ResumeContent = {
 			],
 			position: "Full-Stack / Mobile Consultant",
 			teamMembers: [{ count: 1, role: "Solo or small squad" }],
-			responsibilities: [
-				"Scoped and delivered MVPs and feature increments for startup and small-business clients.",
-				"Owned architecture, implementation, and handoff for React web and React Native mobile products.",
-				"Advised on UI/UX feasibility, release readiness, and maintainable delivery practices.",
-			],
+			responsibilities: {
+				"Technical Leadership & Architecture": [
+					"Owned architecture, implementation, and handoff for React web and React Native mobile products.",
+					"Scoped and delivered MVPs and feature increments for startup and small-business clients.",
+				],
+				"Cross-functional Collaboration & UI/UX": [
+					"Advised on UI/UX feasibility, release readiness, and maintainable delivery practices with client stakeholders.",
+				],
+			},
 		},
 	],
-	languages: [
-		"English (Intermediate): Daily communication in Agile teams",
-	],
+	language: "English (Intermediate): Daily communication in Agile teams",
 	education: {
 		school: "Telecommunications University, Nha Trang",
 		url: "https://tcu.edu.vn",
@@ -431,7 +620,7 @@ export const resumeContent: ResumeContent = {
 			],
 		},
 		{
-			id: "devops",
+			id: "versionControl",
 			skills: [
 				{ name: "SVN", years: 3 },
 				{ name: "GitLab", years: 1 },

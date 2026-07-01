@@ -13,7 +13,7 @@ export default function ResumePage() {
 		summary,
 		experiences,
 		projects,
-		languages,
+		language,
 		education,
 		certifications,
 		skillCategories,
@@ -22,7 +22,7 @@ export default function ResumePage() {
 	return (
 		<div className="newspaper-page min-h-screen bg-background">
 			<div className="px-4 pt-2 pb-24">
-				<div className="@container resume-preview-content mx-auto max-w-5xl space-y-6 px-2 pt-2 pb-4 @md:px-4 @md:pt-3 @md:pb-6">
+				<div className="@container resume-content mx-auto max-w-5xl space-y-6 px-2 pt-2 pb-4 @md:px-4 @md:pt-3 @md:pb-6">
 					<ResumeHeader profile={profile} />
 
 					<div className="space-y-8">
@@ -52,7 +52,7 @@ export default function ResumePage() {
 
 						<ResumeBottomGrid
 							labels={uiLabels}
-							languages={languages}
+							language={language}
 							education={education}
 							certifications={certifications}
 						/>

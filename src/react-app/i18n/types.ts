@@ -1,3 +1,5 @@
+import type { ProjectResponsibilities } from "@/lib/key-responsibilities";
+
 export type ThemeMode = "light" | "dark" | "system";
 
 export type ResolvedTheme = "light" | "dark";
@@ -47,7 +49,7 @@ export type Project = {
 	techStack: string[];
 	position: string;
 	teamMembers: ProjectTeamMember[];
-	responsibilities: string[];
+	responsibilities: ProjectResponsibilities;
 };
 
 export type SkillCategoryId =
@@ -58,7 +60,7 @@ export type SkillCategoryId =
 	| "backend"
 	| "database"
 	| "cloud"
-	| "devops"
+	| "versionControl"
 	| "devOps"
 	| "methodology";
 
@@ -87,7 +89,7 @@ export type ResumeContent = {
 	summary: string[];
 	experiences: Experience[];
 	projects: Project[];
-	languages: string[];
+	language: string;
 	education: Education;
 	certifications: Certification[];
 	skillCategories: SkillCategory[];
@@ -121,7 +123,6 @@ export type ResumeUiLabels = {
 	projectReferences: string;
 	techStack: string;
 	keyResponsibilities: string;
-	contentUpdating: string;
 	theme: string;
 	settings: string;
 	themeLight: string;

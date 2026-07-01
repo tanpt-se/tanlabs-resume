@@ -125,7 +125,6 @@
 	[data-slot="button"],
 	[data-slot="badge"],
 	[data-slot="card-title"],
-	[data-slot="dialog-title"],
 	[data-slot="dropdown-menu-label"] {
 		font-family: var(--font-headline);
 	}
@@ -133,13 +132,11 @@
 	p,
 	li,
 	td,
-	blockquote,
-	[data-slot="card-description"],
-	[data-slot="dialog-description"] {
+	blockquote {
 		font-family: var(--font-body);
 	}
 
-	.resume-preview-content {
+	.resume-content {
 		padding-bottom: 5rem;
 	}
 

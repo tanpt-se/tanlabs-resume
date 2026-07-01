@@ -65,7 +65,7 @@ export function SkillSetAppendix({ labels, skillCategories }: SkillSetAppendixPr
 										>
 											<td className="px-3 py-2">
 												<div className="flex min-w-0 items-center gap-2">
-													<SkillIcon skill={skill.name} monochrome />
+													<SkillIcon skill={skill.name} />
 													<span className="truncate font-medium">{skill.name}</span>
 												</div>
 											</td>

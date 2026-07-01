@@ -11,14 +11,14 @@ import { ResumeSection } from "./ResumeSection";
 
 type ResumeBottomGridProps = {
 	labels: ResumeUiLabels;
-	languages: string[];
+	language: string;
 	education: Education;
 	certifications: Certification[];
 };
 
 export function ResumeBottomGrid({
 	labels,
-	languages,
+	language,
 	education,
 	certifications,
 }: ResumeBottomGridProps) {
@@ -42,7 +42,7 @@ export function ResumeBottomGrid({
 
 				<ResumeSection title={labels.languages}>
 					<p className="newspaper-body text-sm leading-relaxed text-muted-foreground">
-						{languages[0]}
+						{language}
 					</p>
 				</ResumeSection>
 

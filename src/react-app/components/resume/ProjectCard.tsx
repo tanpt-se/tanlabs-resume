@@ -6,8 +6,10 @@ import {
 } from "@/components/ui/card";
 import type { Project, ResumeUiLabels } from "@/i18n";
 
-import { ArticleParagraphs, ProjectSection } from "./newspaper-primitives";
+import { KeyResponsibilityList } from "./KeyResponsibilityList";
+import { ProjectSection } from "./newspaper-primitives";
 import { ProjectMetaPanel } from "./ProjectMetaPanel";
+import { hasProjectResponsibilities } from "@/lib/key-responsibilities";
 
 type ProjectCardProps = {
 	project: Project;
@@ -31,19 +33,11 @@ export function ProjectCard({ project, labels }: ProjectCardProps) {
 					</p>
 				</ProjectSection>
 
-				<ProjectSection
-					label={labels.keyResponsibilities}
-					collapsible
-					defaultExpanded={false}
-				>
-					{project.responsibilities.length > 0 ? (
-						<ArticleParagraphs items={project.responsibilities} />
-					) : (
-						<p className="newspaper-body text-sm italic text-muted-foreground">
-							{labels.contentUpdating}
-						</p>
-					)}
-				</ProjectSection>
+				{hasProjectResponsibilities(project.responsibilities) ? (
+					<ProjectSection label={labels.keyResponsibilities}>
+						<KeyResponsibilityList items={project.responsibilities} />
+					</ProjectSection>
+				) : null}
 			</CardContent>
 		</Card>
 	);

@@ -31,7 +31,9 @@ import {
 	siSupabase,
 	siSwift,
 	siTailwindcss,
+	siUml,
 	siVuedotjs,
+	siWeb3dotjs,
 	siWordpress,
 } from "simple-icons";
 
@@ -65,6 +67,31 @@ const REALM_DB_ICON: SkillIconData = {
 	title: "Realm",
 	hex: "39477F",
 	path: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z",
+};
+
+// ponytail: Slack/SendGrid/Excel removed from simple-icons; paths from legacy simple-icons / brand SVG
+const SLACK_ICON: SkillIconData = {
+	title: "Slack",
+	hex: "4A154B",
+	path: "M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zM18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zM15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z",
+};
+
+const SENDGRID_ICON: SkillIconData = {
+	title: "SendGrid",
+	hex: "1A82E2",
+	path: "M2 2h9v9H2zm11 0h9v9h-9zM2 13h9v9H2zm11 0h9v9h-9z",
+};
+
+const EXCEL_ICON: SkillIconData = {
+	title: "Microsoft Excel",
+	hex: "217346",
+	path: "M23 1.5q.41 0 .7.3.3.29.3.7v19q0 .41-.3.7-.29.3-.7.3H7q-.41 0-.7-.3-.3-.29-.3-.7V18H1q-.41 0-.7-.3-.3-.29-.3-.7V7q0-.41.3-.7Q.58 6 1 6h5V2.5q0-.41.3-.7.29-.3.7-.3zM6 13.28l1.42 2.66h2.14l-2.38-3.87 2.34-3.8H7.46l-1.3 2.4-.05.08-.04.09-.64-1.28-.66-1.29H2.59l2.27 3.82-2.48 3.85h2.16zM14.25 21v-3H7.5v3zm0-4.5v-3.75H12v3.75zm0-5.25V7.5H12v3.75zm0-5.25V3H7.5v3zm8.25 15v-3h-6.75v3zm0-4.5v-3.75h-6.75v3.75zm0-5.25V7.5h-6.75v3.75zm0-5.25V3h-6.75v3Z",
+};
+
+const OBD_II_ICON: SkillIconData = {
+	title: "OBD-II",
+	hex: "0F766E",
+	path: "M5 6h14l2 3v9c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V9l2-3zm1.5 4v7h11v-7h-11zm2 1.5h1.5v1H8.5v-1zm3 0h1.5v1H11.5v-1zm3 0h1.5v1h-1.5v-1zm-6 2.5h1.5v1H8.5v-1zm3 0h1.5v1H11.5v-1zm3 0h1.5v1h-1.5v-1z",
 };
 
 function fromSimpleIcon(icon: { title: string; path: string; hex: string }): SkillIconData {
@@ -114,6 +141,12 @@ export const SKILL_ICONS: Record<string, SkillIconData> = {
 	Mantine: fromSimpleIcon(siMantine),
 	Bootstrap: fromSimpleIcon(siBootstrap),
 	"D3/Chart.js": fromSimpleIcon(siD3),
+	UML: fromSimpleIcon(siUml),
+	Excel: EXCEL_ICON,
+	Slack: SLACK_ICON,
+	SendGrid: SENDGRID_ICON,
+	Web3: fromSimpleIcon(siWeb3dotjs),
+	"OBD II": OBD_II_ICON,
 	"Agile/Scrum": fromSimpleIcon(siScrumalliance),
 	Jira: fromSimpleIcon(siJira),
 	Lark: {
@@ -122,13 +155,3 @@ export const SKILL_ICONS: Record<string, SkillIconData> = {
 		path: "M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z",
 	},
 };
-
-const DARK_ICON_HEX = new Set(["000000", "1C2024"]);
-
-export function getSkillIconColor(hex: string): string | undefined {
-	if (DARK_ICON_HEX.has(hex.toUpperCase())) {
-		return undefined;
-	}
-
-	return `#${hex}`;
-}

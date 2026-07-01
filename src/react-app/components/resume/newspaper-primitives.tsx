@@ -1,5 +1,4 @@
-import { useState, type ReactNode } from "react";
-import { ChevronDown } from "lucide-react";
+import type { ReactNode } from "react";
 
 import type { ProjectTeamMember } from "@/i18n";
 
@@ -35,7 +34,7 @@ export function NewspaperDivider() {
 			className="newspaper-divider flex items-center gap-4 py-1"
 		>
 			<div className="h-px flex-1 bg-foreground/25" />
-			<SkillIcon skill="React" monochrome className="size-4 shrink-0" />
+			<SkillIcon skill="React" className="size-4 shrink-0" />
 			<div className="h-px flex-1 bg-foreground/25" />
 		</div>
 	);
@@ -68,7 +67,7 @@ export function TechTagList({ items }: { items: string[] }) {
 		<div className="flex flex-wrap gap-2">
 			{items.map((item) => (
 				<Badge key={item} variant="outline" className="gap-1.5 rounded-none font-normal">
-					<SkillIcon skill={item} monochrome />
+					<SkillIcon skill={item} />
 					{item}
 				</Badge>
 			))}
@@ -91,64 +90,29 @@ export function ArticleParagraphs({ items }: { items: string[] }) {
 export function ProjectSection({
 	label,
 	children,
-	uppercase = true,
 	header,
-	headerAside,
 	variant = "plain",
-	stackedHeader = false,
-	collapsible = false,
-	defaultExpanded = true,
 }: {
 	label: string;
 	children: ReactNode;
-	uppercase?: boolean;
 	header?: ReactNode;
-	headerAside?: ReactNode;
 	variant?: "plain" | "boxed";
-	stackedHeader?: boolean;
-	collapsible?: boolean;
-	defaultExpanded?: boolean;
 }) {
-	const [expanded, setExpanded] = useState(defaultExpanded);
-
 	const subhead = (
 		<div className="article-subhead min-w-0">
 			<span className="article-subhead__mark" aria-hidden>
 				&gt;
 			</span>
-			<h4 className={cn(uppercase && "uppercase")}>{label}</h4>
+			<h4 className="uppercase">{label}</h4>
 		</div>
 	);
 
 	if (variant === "boxed") {
 		return (
 			<section className="flex h-full w-full min-h-0 flex-col overflow-hidden border border-foreground/25 bg-card">
-				<div
-					className={cn(
-						"newspaper-block-head px-4 py-2.5",
-						!header &&
-							headerAside &&
-							stackedHeader &&
-							"space-y-2",
-						!header &&
-							headerAside &&
-							!stackedHeader &&
-							"space-y-2 @md:flex @md:items-start @md:justify-between @md:gap-4 @md:space-y-0",
-						!header && !headerAside && "flex items-center",
-					)}
-				>
+				<div className="newspaper-block-head px-4 py-2.5">
 					{header ?? (
-						<>
-							<h4
-								className={cn(
-									"newspaper-headline text-sm",
-									uppercase && "uppercase",
-								)}
-							>
-								{label}
-							</h4>
-							{headerAside}
-						</>
+						<h4 className="newspaper-headline text-sm uppercase">{label}</h4>
 					)}
 				</div>
 				<div className="flex-1 px-4 py-3.5">{children}</div>
@@ -158,34 +122,8 @@ export function ProjectSection({
 
 	return (
 		<section className="space-y-3">
-			{collapsible ? (
-				<button
-					type="button"
-					onClick={() => setExpanded((prev) => !prev)}
-					aria-expanded={expanded}
-					className="flex w-full min-w-0 cursor-pointer items-center justify-between gap-3 text-left"
-				>
-					{subhead}
-					<ChevronDown
-						aria-hidden
-						className={cn(
-							"size-4 shrink-0 text-muted-foreground transition-transform duration-200",
-							expanded && "rotate-180",
-						)}
-					/>
-				</button>
-			) : (
-				<div
-					className={cn(
-						headerAside &&
-							"space-y-2 @md:flex @md:items-start @md:justify-between @md:gap-4 @md:space-y-0",
-					)}
-				>
-					{subhead}
-					{headerAside}
-				</div>
-			)}
-			{(!collapsible || expanded) && <div>{children}</div>}
+			{subhead}
+			<div>{children}</div>
 		</section>
 	);
 }
