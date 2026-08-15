@@ -3,6 +3,8 @@ import { ExternalLink } from "lucide-react";
 import type {
 	Certification,
 	Education,
+	Language,
+	Portrait,
 	ResumeUiLabels,
 } from "@/i18n";
 
@@ -11,8 +13,9 @@ import { ResumeSection } from "./ResumeSection";
 
 type ResumeBottomGridProps = {
 	labels: ResumeUiLabels;
-	language: string;
+	language: Language;
 	education: Education;
+	portrait: Portrait;
 	certifications: Certification[];
 };
 
@@ -20,10 +23,11 @@ export function ResumeBottomGrid({
 	labels,
 	language,
 	education,
+	portrait,
 	certifications,
 }: ResumeBottomGridProps) {
 	return (
-		<div className="grid w-full grid-cols-1 items-stretch gap-8 @md:grid-cols-2">
+		<div className="grid w-full grid-cols-1 items-start gap-8 @md:grid-cols-2">
 			<div className="space-y-8">
 				<ResumeSection title={labels.certifications} contentClassName="space-y-3">
 					{certifications.map((cert) => (
@@ -40,10 +44,9 @@ export function ResumeBottomGrid({
 					))}
 				</ResumeSection>
 
-				<ResumeSection title={labels.languages}>
-					<p className="newspaper-body text-sm leading-relaxed text-muted-foreground">
-						{language}
-					</p>
+				<ResumeSection title={labels.languages} contentClassName="space-y-2">
+					<p className="text-sm font-semibold">{language.name}</p>
+					<p className="newspaper-body text-sm text-muted-foreground">{language.detail}</p>
 				</ResumeSection>
 
 				<ResumeSection title={labels.education} contentClassName="space-y-2">
@@ -60,10 +63,9 @@ export function ResumeBottomGrid({
 			</div>
 
 			<NewspaperPhoto
-				src="/education-photo.png"
-				alt={education.photoCaption}
-				caption={education.photoCaption}
-				className="h-full min-h-48"
+				src={portrait.src}
+				alt=""
+				className="print-break-inside-avoid"
 			/>
 		</div>
 	);

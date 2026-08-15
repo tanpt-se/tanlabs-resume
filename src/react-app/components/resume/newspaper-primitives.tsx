@@ -9,12 +9,10 @@ import { cn } from "@/lib/utils";
 export function NewspaperPhoto({
 	src,
 	alt,
-	caption,
 	className,
 }: {
 	src: string;
 	alt: string;
-	caption: string;
 	className?: string;
 }) {
 	return (
@@ -22,7 +20,6 @@ export function NewspaperPhoto({
 			<div className="newspaper-photo__frame">
 				<img src={src} alt={alt} className="newspaper-photo__image" />
 			</div>
-			<figcaption className="newspaper-photo__caption">{caption}</figcaption>
 		</figure>
 	);
 }
@@ -34,7 +31,7 @@ export function NewspaperDivider() {
 			className="newspaper-divider flex items-center gap-4 py-1"
 		>
 			<div className="h-px flex-1 bg-foreground/25" />
-			<SkillIcon skill="React" className="size-4 shrink-0" />
+			<SkillIcon skill="React" className="size-3.5 shrink-0" />
 			<div className="h-px flex-1 bg-foreground/25" />
 		</div>
 	);
@@ -46,7 +43,7 @@ export function MetaPlaceholder() {
 
 export function TeamMemberList({ items }: { items: ProjectTeamMember[] }) {
 	return (
-		<div className="flex flex-wrap gap-1.5">
+		<div className="flex flex-wrap gap-1">
 			{items.map((item) => (
 				<Badge
 					key={item.role}
@@ -64,7 +61,7 @@ export function TeamMemberList({ items }: { items: ProjectTeamMember[] }) {
 
 export function TechTagList({ items }: { items: string[] }) {
 	return (
-		<div className="flex flex-wrap gap-2">
+		<div className="flex flex-wrap gap-1.5">
 			{items.map((item) => (
 				<Badge key={item} variant="outline" className="gap-1.5 rounded-none font-normal">
 					<SkillIcon skill={item} />
@@ -99,7 +96,7 @@ export function ProjectSection({
 	variant?: "plain" | "boxed";
 }) {
 	const subhead = (
-		<div className="article-subhead min-w-0">
+		<div className="article-subhead print-heading min-w-0">
 			<span className="article-subhead__mark" aria-hidden>
 				&gt;
 			</span>
@@ -109,7 +106,7 @@ export function ProjectSection({
 
 	if (variant === "boxed") {
 		return (
-			<section className="flex h-full w-full min-h-0 flex-col overflow-hidden border border-foreground/25 bg-card">
+			<section className="flex h-full w-full min-h-0 flex-col overflow-hidden border border-foreground/25 bg-card print:overflow-visible">
 				<div className="newspaper-block-head px-4 py-2.5">
 					{header ?? (
 						<h4 className="newspaper-headline text-sm uppercase">{label}</h4>
@@ -121,7 +118,7 @@ export function ProjectSection({
 	}
 
 	return (
-		<section className="space-y-3">
+		<section className="space-y-2">
 			{subhead}
 			<div>{children}</div>
 		</section>

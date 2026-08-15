@@ -14,9 +14,9 @@ export function ResumeSection({
 	contentClassName?: string;
 }) {
 	return (
-		<section className={cn("print-break-inside-avoid space-y-4", className)}>
-			<div className="flex items-center justify-between gap-4 border-b-2 border-foreground pb-3">
-				<h2 className="newspaper-headline text-2xl uppercase @md:text-3xl">{title}</h2>
+		<section className={cn("space-y-4", className)}>
+			<div className="print-heading flex items-center justify-between gap-4 border-b-2 border-foreground pb-3">
+				<h2 className="newspaper-headline text-xl uppercase">{title}</h2>
 			</div>
 			<div className={cn("px-1", contentClassName)}>{children}</div>
 		</section>

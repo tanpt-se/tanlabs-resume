@@ -14,7 +14,10 @@ export type Education = {
 	url: string;
 	year: string;
 	degree: string;
-	photoCaption: string;
+};
+
+export type Portrait = {
+	src: string;
 };
 
 export type Experience = {
@@ -81,7 +84,11 @@ export type Profile = {
 	phone: string;
 	email: string;
 	birthDate: string;
-	photoCaption: string;
+};
+
+export type Language = {
+	name: string;
+	detail: string;
 };
 
 export type ResumeContent = {
@@ -89,8 +96,9 @@ export type ResumeContent = {
 	summary: string[];
 	experiences: Experience[];
 	projects: Project[];
-	language: string;
+	language: Language;
 	education: Education;
+	portrait: Portrait;
 	certifications: Certification[];
 	skillCategories: SkillCategory[];
 };
@@ -99,7 +107,6 @@ export type SkillCategoryLabels = Record<SkillCategoryId, string>;
 
 export type ResumeUiLabels = {
 	skillSetAppendix: string;
-	skillSetDescription: string;
 	yearUnit: string;
 	yearsUnit: string;
 	monthUnit: string;
@@ -125,6 +132,7 @@ export type ResumeUiLabels = {
 	keyResponsibilities: string;
 	theme: string;
 	settings: string;
+	downloadCv: string;
 	themeLight: string;
 	themeDark: string;
 	themeSystem: string;

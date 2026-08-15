@@ -4,9 +4,15 @@ import { cn } from "@/lib/utils";
 import { dismissHtmlSplash, waitForAppBoot } from "@/lib/boot";
 
 export function AppBootLoader({ children }: { children: ReactNode }) {
-	const [ready, setReady] = useState(false);
+	const pdfMode = new URLSearchParams(window.location.search).has("pdf");
+	const [ready, setReady] = useState(pdfMode);
 
 	useEffect(() => {
+		if (pdfMode) {
+			dismissHtmlSplash();
+			return;
+		}
+
 		let cancelled = false;
 
 		void waitForAppBoot().then(() => {
@@ -21,7 +27,7 @@ export function AppBootLoader({ children }: { children: ReactNode }) {
 		return () => {
 			cancelled = true;
 		};
-	}, []);
+	}, [pdfMode]);
 
 	return (
 		<div

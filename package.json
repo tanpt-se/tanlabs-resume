@@ -49,6 +49,7 @@
 		"deploy": "wrangler deploy",
 		"dev": "vite",
 		"lint": "eslint .",
+		"pdf": "node scripts/generate-resume-pdf.mjs",
 		"preview": "npm run build && vite preview"
 	},
 	"type": "module"

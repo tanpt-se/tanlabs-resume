@@ -12,10 +12,10 @@ export function ResumeHeader({ profile }: ResumeHeaderProps) {
 			<div className="flex w-full flex-col items-center space-y-4 text-center">
 				<p className="text-center text-sm">{profile.birthDate}</p>
 				<div className="w-full space-y-2 text-center">
-					<h1 className="newspaper-headline text-center text-4xl uppercase @md:text-6xl">
+					<h1 className="newspaper-headline text-center text-3xl uppercase">
 						{profile.name}
 					</h1>
-					<p className="text-center text-lg font-semibold text-muted-foreground @md:text-xl">
+					<p className="text-center text-base font-semibold text-muted-foreground">
 						{profile.title}
 					</p>
 				</div>

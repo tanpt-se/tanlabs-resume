@@ -29,7 +29,7 @@
 	--input: color-mix(in srgb, var(--palette-ink) 18%, transparent);
 	--ring: var(--palette-ink);
 	--radius: 0px;
-	--font-size-root: 16px;
+	--font-size-root: 13px;
 	--font-headline: "Inter", sans-serif;
 	--font-body: "Noto Serif", serif;
 }
@@ -88,6 +88,16 @@
 	--text-sm--line-height: 1.55;
 	--text-base: 1rem;
 	--text-base--line-height: 1.6;
+	--text-lg: 1.077rem;
+	--text-lg--line-height: 1.45;
+	--text-xl: 1.154rem;
+	--text-xl--line-height: 1.3;
+	--text-2xl: 1.308rem;
+	--text-2xl--line-height: 1.2;
+	--text-3xl: 1.538rem;
+	--text-3xl--line-height: 1.12;
+	--text-4xl: 1.692rem;
+	--text-4xl--line-height: 1.1;
 }
 
 @layer base {
@@ -136,8 +146,23 @@
 		font-family: var(--font-body);
 	}
 
-	.resume-content {
-		padding-bottom: 5rem;
+	.resume-stage {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.5rem;
+		padding: 1.5rem 1rem 6rem;
+	}
+
+	.resume-sheet {
+		box-sizing: border-box;
+		container-type: inline-size;
+		width: 210mm;
+		max-width: 100%;
+		min-height: 297mm;
+		padding: 12mm;
+		background: var(--card);
+		box-shadow: 0 12px 40px color-mix(in srgb, var(--foreground) 12%, transparent);
 	}
 
 	@supports (scrollbar-width: thin) {
@@ -187,6 +212,7 @@
 	.newspaper-page .newspaper-body {
 		text-align: justify;
 		hyphens: auto;
+		text-wrap: pretty;
 	}
 
 	.resume-header p,
@@ -202,7 +228,7 @@
 		float: left;
 		margin: 0.08rem 0.45rem 0 0;
 		font-family: var(--font-body);
-		font-size: 4.75rem;
+		font-size: 3rem;
 		font-weight: 700;
 		line-height: 0.72;
 		color: var(--foreground);
@@ -214,7 +240,7 @@
 			margin: 0 0.5rem 0 0;
 			font-size: 1em;
 			line-height: normal;
-			initial-letter: 4;
+			initial-letter: 3;
 			initial-letter-align: auto;
 		}
 	}
@@ -237,7 +263,7 @@
 		align-items: center;
 		gap: 0.5rem;
 		font-family: var(--font-headline);
-		font-size: 0.875rem;
+		font-size: 1rem;
 		font-weight: 800;
 		letter-spacing: -0.02em;
 		line-height: 1.2;
@@ -250,7 +276,7 @@
 
 	.newspaper-photo {
 		display: flex;
-		height: 100%;
+		height: auto;
 		width: 100%;
 		min-height: 0;
 		flex-direction: column;
@@ -268,22 +294,14 @@
 
 	.newspaper-photo__frame {
 		display: flex;
+		height: 76.5mm;
+		max-height: 76.5mm;
 		min-height: 0;
-		flex: 1 1 auto;
+		flex: 0 0 76.5mm;
 		overflow: hidden;
 		border: 1px solid var(--foreground);
 		padding: 0.25rem;
 		background: var(--card);
-	}
-
-	.newspaper-photo__caption {
-		flex-shrink: 0;
-		margin-top: 0.625rem;
-		font-family: var(--font-headline);
-		font-size: 0.875rem;
-		font-weight: 500;
-		line-height: 1.5;
-		color: var(--foreground);
 	}
 
 	.newspaper-section-head {
@@ -333,16 +351,96 @@
 }
 
 @media print {
+	@page {
+		size: A4 portrait;
+		margin: 10mm;
+	}
+
+	:root,
+	html.dark {
+		--font-size-root: 13px;
+		--background: #fffdf8;
+		--foreground: #1c1c1c;
+		--card: #fffdf8;
+		--card-foreground: #1c1c1c;
+		--popover: #fffdf8;
+		--popover-foreground: #1c1c1c;
+		--primary: #1c1c1c;
+		--primary-foreground: #fffdf8;
+		--secondary: #ebe5d8;
+		--secondary-foreground: #1c1c1c;
+		--muted: #ebe5d8;
+		--muted-foreground: #5a5348;
+		--accent: #efe8da;
+		--accent-foreground: #1c1c1c;
+		--destructive: #8b1e1e;
+		--border: color-mix(in srgb, #1c1c1c 22%, transparent);
+		--input: color-mix(in srgb, #1c1c1c 18%, transparent);
+		--ring: #1c1c1c;
+		color-scheme: light;
+	}
+
+	html {
+		font-size: 12px;
+	}
+
+	html,
 	body {
 		background: white !important;
 		color: black !important;
+	}
+
+	#app-splash {
+		display: none !important;
 	}
 
 	.print-hidden {
 		display: none !important;
 	}
 
+	.resume-stage {
+		gap: 0;
+		padding: 0;
+	}
+
+	.resume-sheet {
+		box-shadow: none;
+		width: 100%;
+		max-width: none;
+		min-height: 0;
+		padding: 0;
+		break-after: page;
+		print-color-adjust: exact;
+		-webkit-print-color-adjust: exact;
+	}
+
+	.resume-sheet:last-child {
+		break-after: auto;
+	}
+
+	[data-slot="card"] {
+		display: block;
+	}
+
+	.print-project-page + .print-project-page {
+		break-before: page;
+	}
+
+	.print-project-page .newspaper-divider {
+		display: none;
+	}
+
+	.newspaper-photo__frame {
+		height: 76.5mm;
+		max-height: 76.5mm;
+	}
+
 	.print-break-inside-avoid {
-		break-inside: avoid;
+		break-inside: avoid-page;
+	}
+
+	.print-heading,
+	[data-slot="card-header"] {
+		break-after: avoid-page;
 	}
 }

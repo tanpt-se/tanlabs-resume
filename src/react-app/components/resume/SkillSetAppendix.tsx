@@ -25,19 +25,15 @@ export function SkillSetAppendix({ labels, skillCategories }: SkillSetAppendixPr
 	return (
 		<ResumeSection
 			title={labels.skillSetAppendix}
-			contentClassName="space-y-4"
+			contentClassName="space-y-3"
 		>
-			<p className="newspaper-kicker text-[0.68rem] text-muted-foreground">
-				{labels.skillSetDescription}
-			</p>
-
-			<div className="grid grid-cols-1 gap-4 @md:grid-cols-2 @lg:grid-cols-3">
+			<div className="grid grid-cols-1 gap-3 @md:grid-cols-2">
 				{sections.map((section) => (
 					<div
 						key={section.id}
-						className="overflow-hidden border border-foreground/25 bg-card"
+						className="print-break-inside-avoid overflow-hidden border border-foreground/25 bg-card"
 					>
-						<div className="newspaper-block-head border-b px-3 py-2">
+						<div className="newspaper-block-head border-b px-3 py-1.5">
 							<h3 className="newspaper-headline text-xs uppercase">
 								{labels.skillCategories[section.id]}
 							</h3>
@@ -46,10 +42,10 @@ export function SkillSetAppendix({ labels, skillCategories }: SkillSetAppendixPr
 							<table className="w-full min-w-0 border-collapse text-sm">
 								<thead>
 									<tr className="border-b border-border bg-muted/40">
-										<th className="newspaper-kicker px-3 py-2 text-left text-[0.62rem] font-bold">
+										<th className="newspaper-kicker px-3 py-1.5 text-left text-xs font-bold">
 											{labels.skillColumn}
 										</th>
-										<th className="newspaper-kicker px-3 py-2 text-right text-[0.62rem] font-bold">
+										<th className="newspaper-kicker px-3 py-1.5 text-right text-xs font-bold">
 											{labels.experienceColumn}
 										</th>
 									</tr>
@@ -63,13 +59,13 @@ export function SkillSetAppendix({ labels, skillCategories }: SkillSetAppendixPr
 												index % 2 === 0 ? "bg-secondary/50" : "bg-card",
 											)}
 										>
-											<td className="px-3 py-2">
+											<td className="px-3 py-1.5">
 												<div className="flex min-w-0 items-center gap-2">
 													<SkillIcon skill={skill.name} />
 													<span className="truncate font-medium">{skill.name}</span>
 												</div>
 											</td>
-											<td className="px-3 py-2 text-right text-xs font-medium tabular-nums text-muted-foreground">
+											<td className="px-3 py-1.5 text-right text-xs font-medium tabular-nums text-muted-foreground">
 												{formatSkillYears(skill.years, labels)}
 											</td>
 										</tr>

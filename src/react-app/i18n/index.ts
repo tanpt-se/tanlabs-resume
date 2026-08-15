@@ -18,6 +18,8 @@ export type {
 	ProjectTeamMember,
 	Certification,
 	Education,
+	Language,
+	Portrait,
 } from "./types";
 
 export { uiLabels, resumeContent };

@@ -2,8 +2,6 @@ import type { ResumeUiLabels } from "./types";
 
 export const uiLabels: ResumeUiLabels = {
 	skillSetAppendix: "Reference Appendix",
-	skillSetDescription:
-		"Rounded years of hands-on experience per technology, including listed projects and select freelance engagements.",
 	yearUnit: "year",
 	yearsUnit: "years",
 	monthUnit: "month",
@@ -40,6 +38,7 @@ export const uiLabels: ResumeUiLabels = {
 	keyResponsibilities: "Key Responsibilities",
 	theme: "Theme",
 	settings: "Settings",
+	downloadCv: "Download PDF",
 	themeLight: "Light",
 	themeDark: "Dark",
 	themeSystem: "System",

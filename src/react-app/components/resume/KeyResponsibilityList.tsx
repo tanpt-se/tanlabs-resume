@@ -15,13 +15,13 @@ export function KeyResponsibilityList({ items }: KeyResponsibilityListProps) {
 	}
 
 	return (
-		<div className="space-y-4 text-sm leading-relaxed">
+		<div className="space-y-3 text-sm leading-relaxed">
 			{entries.map(({ label, bullets }) => (
-				<div key={label}>
+				<div key={label} className="print-break-inside-avoid">
 					<p className="font-semibold text-foreground">{label}</p>
-					<ul className="mt-1.5 list-disc space-y-1.5 pl-5 text-muted-foreground">
+						<ul className="mt-1 list-disc space-y-1 pl-5 text-muted-foreground">
 						{bullets?.map((item) => (
-							<li key={item} className="newspaper-body">
+							<li key={item} className="newspaper-body print-break-inside-avoid">
 								{item}
 							</li>
 						))}

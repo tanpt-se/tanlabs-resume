@@ -13,7 +13,7 @@ const STORE_PLATFORM_ICONS = {
 
 function StorePlatformIcon({ platform }: { platform: ProjectStorePlatform }) {
 	if (platform === "web") {
-		return <Globe className="size-4 shrink-0 text-foreground" aria-hidden />;
+		return <Globe className="size-3.5 shrink-0 text-foreground" aria-hidden />;
 	}
 
 	const icon = STORE_PLATFORM_ICONS[platform];
@@ -23,7 +23,7 @@ function StorePlatformIcon({ platform }: { platform: ProjectStorePlatform }) {
 			role="img"
 			aria-label={icon.title}
 			viewBox="0 0 24 24"
-			className="size-4 shrink-0 text-foreground"
+			className="size-3.5 shrink-0 text-foreground"
 		>
 			<path fill="currentColor" d={icon.path} />
 		</svg>
@@ -32,7 +32,7 @@ function StorePlatformIcon({ platform }: { platform: ProjectStorePlatform }) {
 
 function ProjectMetaItem({ label, value, url, members }: ProjectMetaField) {
 	return (
-		<div className="space-y-1 border-b border-border px-4 py-3 last:border-b-0 @md:[&:nth-last-child(-n+2)]:border-b-0 @md:[&:nth-child(odd)]:border-r">
+		<div className="space-y-1 border-b border-border px-3 py-2 last:border-b-0 @md:[&:nth-last-child(-n+2)]:border-b-0 @md:[&:nth-child(odd)]:border-r">
 			<p className="newspaper-kicker text-xs">{label}</p>
 			{members !== undefined ? (
 				members.length > 0 ? (
@@ -93,14 +93,14 @@ export function ProjectMetaPanel({ project, labels }: ProjectMetaPanelProps) {
 	const metaFields = getProjectMetaFields(project, labels);
 
 	return (
-		<div className="overflow-hidden border border-foreground/25 bg-card">
+		<div className="print-break-inside-avoid overflow-hidden border border-foreground/25 bg-card">
 			<div className="grid @md:grid-cols-2">
 				{metaFields.map((field) => (
 					<ProjectMetaItem key={field.label} {...field} />
 				))}
 			</div>
 			<div className="grid border-t border-border @md:grid-cols-2">
-				<div className="space-y-2 border-b border-border px-4 py-3 @md:border-r @md:border-b-0">
+					<div className="space-y-1.5 border-b border-border px-3 py-2 @md:border-r @md:border-b-0">
 					<p className="newspaper-kicker text-xs">{labels.techStack}</p>
 					{project.techStack.length > 0 ? (
 						<TechTagList items={project.techStack} />
@@ -108,7 +108,7 @@ export function ProjectMetaPanel({ project, labels }: ProjectMetaPanelProps) {
 						<MetaPlaceholder />
 					)}
 				</div>
-				<div className="space-y-2 px-4 py-3">
+					<div className="space-y-1.5 px-3 py-2">
 					<p className="newspaper-kicker text-xs">{labels.projectReferences}</p>
 					{project.storeLinks?.length ? (
 						<ProjectStoreLinks storeLinks={project.storeLinks} />
