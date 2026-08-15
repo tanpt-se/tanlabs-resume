@@ -83,6 +83,8 @@ export type Profile = {
 	location: string;
 	phone: string;
 	email: string;
+	linkedin: string;
+	github: string;
 	birthDate: string;
 };
 

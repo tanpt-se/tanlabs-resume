@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Link, Mail, MapPin, Phone } from "lucide-react";
 
 import type { Profile } from "@/i18n";
 
@@ -37,6 +37,24 @@ export function ResumeHeader({ profile }: ResumeHeaderProps) {
 					>
 						<Mail className="size-3.5 shrink-0" />
 						{profile.email}
+					</a>
+					<a
+						href={profile.linkedin}
+						target="_blank"
+						rel="noreferrer"
+						className="inline-flex items-center gap-1.5 underline-offset-4 hover:underline"
+					>
+						<Link className="size-3.5 shrink-0" />
+						LinkedIn
+					</a>
+					<a
+						href={profile.github}
+						target="_blank"
+						rel="noreferrer"
+						className="inline-flex items-center gap-1.5 underline-offset-4 hover:underline"
+					>
+						<Link className="size-3.5 shrink-0" />
+						GitHub
 					</a>
 				</div>
 			</div>
